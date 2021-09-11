@@ -1,0 +1,53 @@
+html {
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 7px 16px;
+  /* border-collapse: collapse; */
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td,
+th {
+  border: 1px solid rgb(190, 190, 190);
+  padding: 10px 20px;
+}
+
+td {
+  text-align: center;
+}
+
+caption {
+  padding: 10px;
+}
+
+.intv {
+  background-color: rgb(102, 101, 101);
+  width: 20px;
+}
+.rotate {
+  transform: rotate(90deg);
+  font-size: 30px;
+}
+
+.glow {
+  transition: all 0.2s ease-in-out;
+  border: 3px solid #dadada;
+  border-radius: 7px;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.block:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
+  border-radius: 7px;
+  border-color: #115791;
+  box-shadow: 0 0 10px #9ecaed;
+}
