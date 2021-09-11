@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./timetable.css" />
+    <title>Time Table</title>
+  </head>
+  <body>
+    <h1>TIMETABLE</h1>
+
+    <table>
+      <tr>
+        <td>&nbsp;</td>
+        <th>09:00 - 10.00</th>
+        <th>10:05 - 11:05</th>
+        <th>11:10 - 12:10</th>
+        <th>12:15 - 01:15</th>
+        <th class="intv">01:15 - 02:00</th>
+        <th>02:00 - 03:00</th>
+        <th>03:05 - 04:05</th>
+        <th>04:10 - 05:10</th>
+      </tr>
+      <tr>
+        <th class="mon block">MONDAY</th>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="mon block">IPROG - II</td>
+        <td class="mon block">IPROG - II</td>
+        <td class="intv" rowspan="5"><div class="rotate">INTERVAL</div></td>
+        <td class="mon block">SPE</td>
+        <td class="mon block">DEC</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th class="tue block">TUESDAY</th>
+        <td>&nbsp;</td>
+        <td class="tue block">DEC</td>
+        <td class="tue block">NT</td>
+        <td class="tue block">P & S</td>
+        <td class="tue block" colspan="2">DEC LAB</td>
+        <td class="tue block">&nbsp;</td>
+      </tr>
+      <tr>
+        <th class="wed block">WEDNESDAY</th>
+        <td>&nbsp;</td>
+        <td class="wed block">IPROG - II</td>
+        <td class="wed block">IPROG - II</td>
+        <td class="wed block">DEC</td>
+        <td class="wed block">SPE</td>
+        <td class="wed block">NT</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th class="thu block">THURSDAY</th>
+        <td>&nbsp;</td>
+        <td class="thu block">P & S</td>
+        <td class="thu block">NT</td>
+        <td class="thu block">DEC</td>
+        <td class="thu block" colspan="2">IPROG - II LAB</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th class="fri block">FRIDAY</th>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td class="fri block">P & S</td>
+        <td class="fri block">SPE</td>
+        <td class="fri block" colspan="2">CS - III</td>
+      </tr>
+    </table>
+    <script src="./timetable.js"></script>
+  </body>
+</html>
