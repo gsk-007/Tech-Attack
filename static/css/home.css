@@ -20,13 +20,15 @@ nav{
     width: 50vw;
     margin: 15px auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .navbar li{
     /* display: inline-block; */
     list-style: none;
     padding: 5px 10px;
-    font-size: 20px;
-    
+    font-size: 20px;   
 }
 .navbar li a{
     text-decoration: none;
