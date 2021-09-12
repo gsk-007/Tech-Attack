@@ -1,14 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Ewert&family=Frijole&family=Rouge+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Average&display=swap");
+body,
+html {
+  height: 100%;
+  margin: 0px;
+}
+.bg {
+  background-image: url("./../imgs/5.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 html {
   font-family: sans-serif;
 }
 
+.head {
+  margin: 0px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  font-family: "Average", serif;
+  padding: 1px;
+  font-size: 40px;
+  padding-top: 35px;
+  padding-bottom: 8px;
+}
+
 table {
+  font-family: EB Garamond, serif;
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
+  width: 95%;
   border-collapse: separate;
   border-spacing: 7px 16px;
   /* border-collapse: collapse; */
   border: 2px solid rgb(200, 200, 200);
   letter-spacing: 1px;
-  font-size: 0.8rem;
+  font-size: 15px;
+  opacity: 95%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 td,
@@ -26,9 +60,22 @@ caption {
 }
 
 .intv {
-  background-color: rgb(102, 101, 101);
-  width: 20px;
+  padding: 0px;
+  margin: 0px;
+  opacity: 80%;
+  background-color: rgb(58, 56, 56);
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.98);
+  /* transition-delay: 2s; */
 }
+.intv:hover {
+  padding: 0px;
+  transform: scale(1);
+  margin: 0px;
+  opacity: 95%;
+  cursor: pointer;
+}
+
 .rotate {
   transform: rotate(90deg);
   font-size: 30px;
@@ -45,9 +92,11 @@ caption {
 
 .block:hover {
   cursor: pointer;
-  transform: scale(1.01);
-  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+  background-color: black;
+  opacity: 70%;
+  border: 2px solid #3700ff;
   border-radius: 7px;
-  border-color: #115791;
+  border-color: #98e7ff;
   box-shadow: 0 0 10px #9ecaed;
 }
