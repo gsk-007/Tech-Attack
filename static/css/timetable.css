@@ -6,7 +6,7 @@ html {
   margin: 0px;
 }
 .bg {
-  background-image: url("./../imgs/5.jpg");
+  background-image: url("./../imgs/6.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,6 +17,7 @@ html {
 }
 
 .head {
+  color: white;
   margin: 0px;
   padding: 20px;
   display: flex;
@@ -24,7 +25,7 @@ html {
   font-family: "Average", serif;
   padding: 1px;
   font-size: 40px;
-  padding-top: 35px;
+  padding-top: 15px;
   padding-bottom: 8px;
 }
 
@@ -85,19 +86,19 @@ caption {
   border: 3px solid #dadada;
   border-radius: 7px;
   outline: none;
-  border-color: #9ecaed;
-  box-shadow: 0 0 10px #9ecaed;
+  border-color: #79c0fa;
+  box-shadow: 0 0 20px #067fe2;
 }
 
 .block:hover {
   cursor: pointer;
   transform: scale(1.1);
-  background-color: black;
-  opacity: 70%;
+  background-color: rgba(10, 10, 10, 0.801);
+  opacity: 95%;
   border: 2px solid #3700ff;
   border-radius: 7px;
-  border-color: #98e7ff;
-  box-shadow: 0 0 10px #9ecaed;
+  border-color: #79c0fa;
+  box-shadow: 0 0 20px #067fe2;
 }
 
 @media only screen and (max-width: 700px) {

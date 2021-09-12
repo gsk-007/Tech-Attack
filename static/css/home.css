@@ -9,61 +9,6 @@
   background-size: cover;
 }
 
-nav {
-  display: flex;
-  height: 12vh;
-}
-.left img {
-  border-radius: 10px;
-  margin: 10px;
-  height: 80%;
-  width: 80%;
-}
-.navbar {
-  height: 5vh;
-  width: 50vw;
-  margin: 15px auto;
-  display: flex;
-}
-.navbar li {
-  list-style: none;
-  padding: 5px 10px;
-  font-size: 20px;
-}
-.navbar li a {
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.navbar li a:hover {
-  text-decoration: underline;
-  text-shadow: 5px 5px 15px rgb(51, 39, 219);
-}
-
-.btn {
-  margin: 18px 8px;
-  margin-right: 20px;
-  background-color: transparent;
-  border-radius: 12px;
-  border: 2px solid #0c1575;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Trebuchet MS;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 6px 17px;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-
-.btn:hover {
-  background-color: transparent;
-  transform: scale(1.1);
-  box-shadow: 2px 2px 10px 0 #4f5cec;
-}
-
 main {
   background-color: rgb(192, 227, 243);
   background-image: linear-gradient(
