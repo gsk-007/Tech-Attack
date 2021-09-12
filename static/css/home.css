@@ -1,14 +1,14 @@
 body{
     background-image: url("../imgs/bg.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 90vh;
+    background-size: 100vw 90vh;
 }
 nav{
     margin-top: 10px;
     background-color: brown;
     display: flex;
     height: 12vh;
-   
+
 }
 .left img{
     margin: 8px;
@@ -25,11 +25,13 @@ nav{
     /* display: inline-block; */
     list-style: none;
     padding: 5px 10px;
+    font-size: 20px;
     
 }
 .navbar li a{
     text-decoration: none;
     color: yellow;
+    cursor: pointer;
     
 }
 .navbar li a:hover{
@@ -52,11 +54,23 @@ nav{
 }
 
 main{
-    height: 100px;
-    width: 100vw;
+    height: 70vh;
+    /* width: 100vw; */
     background-color: green;
     position:relative;
     margin-top: 70vh;
+    display: flex;
+}
+.content p{
+    width: 40vw;
+    margin: auto;
+    font-size: xx-large;
+    padding: 40px;
+}
+
+.content img{
+    height: 65vh;
+    margin: auto;
 }
 
 footer{
