@@ -1,0 +1,54 @@
+.bg{
+    background: url("../imgs/to-do-bg2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(15px);
+}
+main{
+    height: 80vh;
+   
+}
+.to-do-list{
+    max-width: 60vw;
+    margin:  20px auto; 
+    backdrop-filter: blur(5px);
+    
+}
+.to-do-list h1{
+    margin:  10px auto; 
+}
+.to-do-list input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #5f9341;
+    margin-bottom: 4px;
+}
+
+.to-do-list button {
+    background: #5f9341;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #5f9341;
+    font-weight: bold;
+}
+
+.to-do-list #delete-btn {
+    background: white;
+    color: #5f9341;
+}
+
+.to-do-list ol {
+    margin-top: 20px;
+    max-height: 50vh;
+    padding-left: 15px;
+    list-style: decimal;
+    overflow-y: scroll;
+    
+    color: white;
+}
+
+.to-do-list li {
+    margin-top: 5px;
+    padding: 5px;
+}
