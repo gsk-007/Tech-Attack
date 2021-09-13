@@ -1,7 +1,8 @@
 /* table styling */
 table {
   border-collapse: collapse;
-  margin: 4vh 0 0 15vh;
+  margin: 12vh 37vw;
+  /* margin-left: 38vw; */
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
