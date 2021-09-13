@@ -1,11 +1,12 @@
 "use strict";
 // selectors
-
+let currStudentIndex = 0;
 const std_list = document.querySelector(".std_list");
 const close_btn = document.querySelector(".close");
 const modal = document.querySelector(".modal");
 const head = document.querySelector(".header");
 const table_wrapper = document.querySelector("#table-wrapper");
+const modal_content = document.querySelector(".modal-content");
 /////////////////////////////////////////
 
 /////////////////////////////////////////
@@ -22,13 +23,13 @@ const student_info = [
     image: male_def_img,
     image_icon: male_def_icon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit. Vivamus imperdiet, velit sit amet porta volutpat, est lectus imperdiet quam, ac viverra dolor nisi at lorem. Phasellus elementum euismod eros vel gravida. Nunc in rhoncus odio, quis dictum ex. Etiam a tincidunt lorem",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
     achivements: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
       "Ut at leo at sem varius venenatis.",
     ],
-    skills: ["C++", "C", "python", "java"],
+    skills: "1. C++ | 2. C | 3. HTML | 4. javaScript | 5. CSS",
   },
   {
     name: "Avansh Singh",
@@ -36,13 +37,13 @@ const student_info = [
     image: male_def_img,
     image_icon: male_def_icon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit. Vivamus imperdiet, velit sit amet porta volutpat, est lectus imperdiet quam, ac viverra dolor nisi at lorem. Phasellus elementum euismod eros vel gravida. Nunc in rhoncus odio, quis dictum ex. Etiam a tincidunt lorem",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
     achivements: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
       "Ut at leo at sem varius venenatis.",
     ],
-    skills: ["C++", "C", "python", "java"],
+    skills: "1. C++ | 2. C | 3. HTML | 4. java | 5. CSS",
   },
   {
     name: "Bhairav Gupta",
@@ -50,13 +51,13 @@ const student_info = [
     image: male_def_img,
     image_icon: male_def_icon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit. Vivamus imperdiet, velit sit amet porta volutpat, est lectus imperdiet quam, ac viverra dolor nisi at lorem. Phasellus elementum euismod eros vel gravida. Nunc in rhoncus odio, quis dictum ex. Etiam a tincidunt lorem",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
     achivements: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
       "Ut at leo at sem varius venenatis.",
     ],
-    skills: ["C", "python"],
+    skills: "1. C++ | 2. C | 3. python ",
   },
   {
     name: "Gursimrat Kalra",
@@ -64,13 +65,13 @@ const student_info = [
     image: male_def_img,
     image_icon: male_def_icon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit. Vivamus imperdiet, velit sit amet porta volutpat, est lectus imperdiet quam, ac viverra dolor nisi at lorem. Phasellus elementum euismod eros vel gravida. Nunc in rhoncus odio, quis dictum ex. Etiam a tincidunt lorem",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
     achivements: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
       "Ut at leo at sem varius venenatis.",
     ],
-    skills: ["C++", "C", "java"],
+    skills: "1. C++ | 2. C | 3. HTML | 4. javaScript | 5. CSS",
   },
   {
     name: "Rajesh Raj",
@@ -78,13 +79,13 @@ const student_info = [
     image: male_def_img,
     image_icon: male_def_icon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit. Vivamus imperdiet, velit sit amet porta volutpat, est lectus imperdiet quam, ac viverra dolor nisi at lorem. Phasellus elementum euismod eros vel gravida. Nunc in rhoncus odio, quis dictum ex. Etiam a tincidunt lorem",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
     achivements: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
       "Ut at leo at sem varius venenatis.",
     ],
-    skills: ["C++", "C", "python", "java"],
+    skills: "1. C++ | 2. C | 3. HTML",
   },
   {
     name: "Yash Gupta",
@@ -92,13 +93,13 @@ const student_info = [
     image: male_def_img,
     image_icon: male_def_icon,
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit. Vivamus imperdiet, velit sit amet porta volutpat, est lectus imperdiet quam, ac viverra dolor nisi at lorem. Phasellus elementum euismod eros vel gravida. Nunc in rhoncus odio, quis dictum ex. Etiam a tincidunt lorem",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
     achivements: [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
       "Ut at leo at sem varius venenatis.",
     ],
-    skills: ["C++"],
+    skills: "1. C++ | 2. C | 3. HTML | 4. javaScript | 5. CSS",
   },
 ];
 // testing
@@ -108,13 +109,13 @@ student_info.push({
   image: female_def_img,
   image_icon: female_def_icon,
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit. Vivamus imperdiet, velit sit amet porta volutpat, est lectus imperdiet quam, ac viverra dolor nisi at lorem. Phasellus elementum euismod eros vel gravida. Nunc in rhoncus odio, quis dictum ex. Etiam a tincidunt lorem",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
   achivements: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
     "Ut at leo at sem varius venenatis.",
   ],
-  skills: ["C++", "javaScript", "HTML"],
+  skills: "1. HTML | 2. javaScript | 3. CSS",
 });
 
 student_info.push({
@@ -123,13 +124,13 @@ student_info.push({
   image: female_def_img,
   image_icon: female_def_icon,
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit. Vivamus imperdiet, velit sit amet porta volutpat, est lectus imperdiet quam, ac viverra dolor nisi at lorem. Phasellus elementum euismod eros vel gravida. Nunc in rhoncus odio, quis dictum ex. Etiam a tincidunt lorem",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
   achivements: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
     "Ut at leo at sem varius venenatis.",
   ],
-  skills: ["C", "javaScript", "HTML", "CSS"],
+  skills: "1. C++ | 2. C ",
 });
 
 // sorting of student_info by name
@@ -163,15 +164,62 @@ student_info.forEach((curr, i) => {
 </tr>`;
   std_list.insertAdjacentHTML("beforeend", user_list);
 });
+////////////////////////////////////////////////////////////////////////
+// adding student info to modal
+let achive = ``;
+student_info.forEach((curr, i) => {
+  curr.achivements.forEach((curr) => {
+    achive += `<p style="display: block">${curr}</p>`;
+  });
+
+  const std_info = `
+<div class="hide stdInfo">
+<img
+  class="student-img"
+  src="${curr.image}"
+/>
+<h2>${curr.name}</h2>
+<br />
+<p>
+  ${curr.description}
+</p>
+<br />
+<hr style="margin-top: 15px" />
+<br />
+<h3>ACHIEVEMENTS</h3>
+<br />
+${achive}
+<br />
+<hr />
+<br />
+<h3>SKILLS</h3>
+<br />
+<h4>${curr.skills}</h4>
+</div>`;
+  modal_content.insertAdjacentHTML("beforeend", std_info);
+  achive = ``;
+});
 
 /////////////////////////// EVENT LISTENERS /////////////////////////////
+const stdInfo = document.querySelectorAll(".stdInfo");
+// console.log(stdInfo);
 const student = document.querySelectorAll(".student");
+/////////////////////////// FUNCTION START /////////////////////////////
+
+const showDetails = (currstd) => {
+  stdInfo[currstd].classList.toggle("hide");
+};
+
+/////////////////////////// FUNCTION END //////////////////////////////
+
 // show student description
 student.forEach((curr, i) => {
   curr.addEventListener("click", () => {
     table_wrapper.classList.toggle("hide");
     head.classList.toggle("hide");
     modal.classList.toggle("hide");
+    showDetails(i);
+    currStudentIndex = i;
   });
 });
 
@@ -180,4 +228,5 @@ close_btn.addEventListener("click", () => {
   modal.classList.toggle("hide");
   table_wrapper.classList.toggle("hide");
   head.classList.toggle("hide");
+  stdInfo[currStudentIndex].classList.toggle("hide");
 });
