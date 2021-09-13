@@ -1,14 +1,14 @@
 /* table styling */
 table {
   border-collapse: collapse;
-  margin: 4vh 0 0 15vh;
+  margin: auto;
+  /* margin-left: 38vw; */
   font-size: 0.9em;
   font-family: sans-serif;
   min-width: 400px;
   width: 50%;
   box-shadow: 0px 0px 25px rgba(221, 7, 157, 0.349);
-  background-color: rgba(36, 36, 37, 0.383);
-  border-radius: 20px;
+  background-color: rgba(36, 36, 37, 0.685);
 }
 p {
   display: inline;
@@ -18,7 +18,7 @@ p {
   position: relative;
 }
 #table-scroll {
-  height: 400px;
+  height: 450px;
   overflow: auto;
   margin-top: 20px;
 }
@@ -56,7 +56,7 @@ html {
   margin: 0px;
 }
 .bg {
-  background-image: url("./../imgs/s1.jpg");
+  background-image: url("../imgs/students-bg4.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -92,7 +92,7 @@ html {
 .modal-content {
   color: wheat;
   text-align: center;
-  background-color: #6968686e;
+  background-color: rgba(36, 36, 37, 0.685);
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
