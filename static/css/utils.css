@@ -21,8 +21,9 @@ nav {
   }
   .navbar {
     height: 5vh;
-    width: 50vw;
-    margin: 15px auto;
+    width: 70vw;
+    margin: 15px 0;
+    padding-left: 0;
     display: flex;
   }
   .navbar li {
