@@ -20,9 +20,11 @@
             <li>
               <a target="_self" href="./timetable.html">TimeTable</a>
             </li>
-            <li><a href="#">Notice Board</a></li>
-            <li><a href="#">Students</a></li>
-            <li><a href="#">About</a></li>
+            <li>
+              <a target="_self" href="./noticeboard.html">Notice Board</a>
+            </li>
+            <li><a target="_self" href="./student.html">Students</a></li>
+            <li><a target="_self" href="#">About</a></li>
           </ul>
           <div class="right">
             <button class="btn">Sign Up</button>
@@ -30,41 +32,67 @@
           </div>
         </nav>
       </header>
-      <table>
-        <thead>
-          <tr>
-            <th></th>
-            <th>Name</th>
-            <th>Branch</th>
-            <th>Roll No.</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="width: 30px; padding: 0px">
-              <img
-                class="user_thumb"
-                src="./../static/imgs/student_info_resource/male_icon.ico"
-              />
-            </td>
-            <td>conqryash007</td>
-            <td>IT</td>
-            <td>B420066</td>
-          </tr>
-          <tr>
-            <td style="width: 30px; padding: 0px">
-              <img
-                class="user_thumb"
-                src="./../static/imgs/student_info_resource/female_icon.ico"
-              />
-            </td>
-            <td>gsk007</td>
-            <td>IT</td>
-            <td>B420024</td>
-          </tr>
-          <!-- and so on... -->
-        </tbody>
-      </table>
+      <!--=========================---------------- MODAL--------------================ -->
+      <div id="myModal" class="modal hide">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img
+            class="student-img"
+            src="./../static/imgs/student_info_resource/male_img.png"
+          />
+          <h2>FRONTNAME SIRNAME</h2>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+            semper, lorem quis placerat rutrum, purus mauris tristique sapien,
+            ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue
+            fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis
+            facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed
+            fringilla elit.
+          </p>
+          <br />
+          <hr style="margin-top: 15px" />
+          <br />
+          <h3>ACHIEVEMENTS</h3>
+          <br />
+
+          <p style="display: block">Ut at leo at sem varius venenatis.</p>
+          <p style="display: block">
+            Mauris sit amet dolor vitae quam mattis tincidunt in a sem.
+          </p>
+          <p style="display: block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <br />
+          <hr />
+          <br />
+          <h3>SKILLS</h3>
+          <h6>C++</p>
+          <h6>HTML</p>
+          <h6>C</p>
+        </div>
+      </div>
+      <!--=========================---------------- MODAL - END--------------================ -->
+
+      <!--=========================---------------- TABLE --------------================ -->
+
+      <div class="" id="table-wrapper">
+        <div id="table-scroll">
+          <table>
+            <thead>
+              <tr class="text">
+                <th class="text"></th>
+                <th><span class="text">Name</span></th>
+                <th><span class="text">Branch</span></th>
+                <th><span class="text">Roll No.</span></th>
+              </tr>
+            </thead>
+            <tbody class="std_list"></tbody>
+          </table>
+        </div>
+      </div>
+      <!--=========================---------------- TABLE - END --------------================ -->
     </div>
+    <script src="./../static/js/student.js"></script>
   </body>
 </html>
