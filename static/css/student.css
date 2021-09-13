@@ -1,0 +1,55 @@
+/* table styling */
+table {
+  border-collapse: collapse;
+  margin: 4vh 0 0 15vh;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0px 0px 25px rgba(221, 7, 157, 0.349);
+  background-color: rgba(36, 36, 37, 0.383);
+}
+table thead tr {
+  background-color: rgba(37, 36, 36, 0.164);
+  color: #ffffff;
+  text-align: left;
+}
+table th,
+table td {
+  padding: 12px 15px;
+}
+table tbody tr {
+  color: wheat;
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #dad6d615;
+}
+table tbody tr:nth-of-type(odd) {
+  background-color: #99939317;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+/* ================================ */
+
+body,
+html {
+  height: 100%;
+  margin: 0px;
+}
+.bg {
+  background-image: url("./../imgs/s1.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.user_thumb {
+  height: 40px;
+  width: 40px;
+  margin-left: 20px;
+  padding: 5px;
+}
