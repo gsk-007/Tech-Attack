@@ -19,7 +19,7 @@ main{
     margin: auto;
     border: 2px solid black;
     flex-direction: column;
-    overflow: scroll; 
+    overflow-y: scroll; 
     backdrop-filter: blur(15px);
      
 }
