@@ -1,0 +1,41 @@
+.bg{
+    background-image: url("../imgs/noticeboard-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+main{
+    height:100%;
+    /* background-color: red; */
+    margin-top: 10px;
+    padding: 20px;    
+    color: aliceblue;
+}
+.notice-board{
+    height: 90vh;
+    max-width: 60vw;
+    display: flex;
+    margin: auto;
+    border: 2px solid black;
+    flex-direction: column;
+    overflow: scroll; 
+    backdrop-filter: blur(15px);
+     
+}
+.notice-board h1{
+    margin: auto;
+    padding: 5px;
+     
+}
+.notice-board ul{
+    list-style: decimal;
+}
+.notices{
+    margin: 10px 10px;
+    padding: 5px 10px;
+}
+.notices h3:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
