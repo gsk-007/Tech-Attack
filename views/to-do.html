@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do</title>
-    <link rel="stylesheet" href="../static/css/utils.css">
-    <link rel="stylesheet" href="../static/css/to-do.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../static/css/utils.css" />
+    <link rel="stylesheet" href="../static/css/to-do.css" />
+  </head>
+  <body>
     <div class="bg">
-    <header class="header">
+      <header class="header">
         <nav>
           <div class="left">
             <img src="./../static/imgs/logo.png" alt="Logo of IIIT BBSR" />
@@ -18,11 +18,13 @@
           <ul class="navbar">
             <li><a target="_self" href="./../index.html">Home</a></li>
             <li>
-              <a target="_self" href="views/timetable.html">TimeTable</a>
+              <a target="_self" href="./timetable.html">TimeTable</a>
             </li>
-            <li><a href="./noticeboard.html">Notice Board</a></li>
-            <li><a href="./student.html">Students</a></li>
-            <li><a href="#">To-Do</a></li>
+            <li>
+              <a target="_self" href="./noticeboard.html">Notice Board</a>
+            </li>
+            <li><a target="_self" href="./student.html">Students</a></li>
+            <li><a target="_self" href="./to-do.html">To-Do</a></li>
           </ul>
           <div class="right">
             <button class="btn">Sign Up</button>
@@ -31,21 +33,29 @@
         </nav>
       </header>
       <main>
-          <div class="to-do-list">
-                <h1>TO-DO LIST</h1>
-              <input type="text" id="input-el">
-              <button id="input-btn">ADD TASK</button>
-              <button id="delete-btn">DELETE ALL</button>
-              <ol id="ul-el">
-            </ol>
+        <div class="to-do-list">
+          <h1>TO-DO LIST</h1>
+          <div class="group">
+            <input
+              type="text"
+              id="input-el"
+              placeholder="Enter details"
+              required
+            />
+            <span class="highlight"></span>
+            <span class="bar"></span>
+          </div>
+          <button id="input-btn" class="btn-style">ADD TASK</button>
+          <button id="delete-btn" class="btn-style">DELETE ALL</button>
+          <ol id="ul-el"></ol>
         </div>
       </main>
     </div>
-    
-      <footer class="flex-all-center">
-        <p>Copyright &copy; TechAttack.com | All Rights Reservered</p>
-      </footer>
 
-      <script src="../static/js/to-do.js"></script>
-</body>
+    <footer class="flex-all-center">
+      <p>Copyright &copy; TechAttack.com | All Rights Reservered</p>
+    </footer>
+
+    <script src="../static/js/to-do.js"></script>
+  </body>
 </html>

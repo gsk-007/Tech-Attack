@@ -1,54 +1,172 @@
-.bg{
-    background: url("../imgs/to-do-bg2.jpg");
+/*//////////////////////////*/
+@import url("https://fonts.googleapis.com/css2?family=Atomic+Age&display=swap");
+.group {
+  position: relative;
+  margin-bottom: 20px;
+}
+input {
+  background-color: #a1a2a836;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+input:focus {
+  outline: none;
+}
+
+/* BOTTOM BARS ================================= */
+.bar {
+  position: relative;
+  display: block;
+  width: 400px;
+}
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #28830c;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+
+/* active state */
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/*/ /////////////////////////*/
+
+.bg {
+  /* background: url("../imgs/to-do-bg2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px); */
+  background-image: linear-gradient(
+    to bottom,
+    #020c38,
+    #060a16,
+    #0b0f1e,
+    #0d1427,
+    #0d182f,
+    #0d1a37,
+    #0f1c3e,
+    #121d46,
+    #1b1c4d,
+    #261a53,
+    #331658,
+    #400f5b
+  );
 }
-main{
-    height: 80vh;
-   
+main {
+  height: 80vh;
 }
-.to-do-list{
-    max-width: 60vw;
-    margin:  20px auto; 
-    backdrop-filter: blur(5px);
-    
+.to-do-list {
+  max-width: 60vw;
+  margin: 20px auto;
+  backdrop-filter: blur(5px);
 }
-.to-do-list h1{
-    margin:  10px auto; 
+.to-do-list h1 {
+  margin: 10px auto;
 }
 .to-do-list input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #5f9341;
-    margin-bottom: 4px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  /* border: 1px solid #5f9341; */
+  margin-bottom: 4px;
 }
 
 .to-do-list button {
-    background: #5f9341;
-    color: white;
-    padding: 10px 20px;
-    border: 1px solid #5f9341;
-    font-weight: bold;
+  background: #5f9341;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #5f9341;
+  font-weight: bold;
 }
 
 .to-do-list #delete-btn {
-    background: white;
-    color: #5f9341;
+  background: white;
+  color: #5f9341;
 }
 
 .to-do-list ol {
-    margin-top: 20px;
-    max-height: 50vh;
-    padding-left: 15px;
-    list-style: decimal;
-    overflow-y: scroll;
-    
-    color: white;
+  margin-top: 20px;
+  max-height: 40vh;
+  padding-left: 15px;
+  list-style: decimal;
+  overflow: auto;
+  color: white;
+  list-style-type: none;
 }
 
 .to-do-list li {
-    margin-top: 5px;
-    padding: 5px;
+  margin-top: 5px;
+  padding: 5px;
+  font-family: verdana;
+  font-size: large;
+  color: rgba(205, 249, 205, 0.72);
+  background-color: rgba(84, 84, 84, 0.294);
+  text-shadow: rgb(0, 0, 0) 2px 2px 2px;
+}
+
+h1 {
+  font-family: Atomic Age, display;
+  font-size: 44px;
+  font-weight: bold;
+  color: rgba(254, 255, 254, 0.883);
+  text-transform: none;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+  text-shadow: 0px 0px 8px rgb(0, 255, 34);
+}
+/*/////////////////////*/
+.btn-style {
+  background: #29f700;
+  background-image: -webkit-linear-gradient(top, #29f700, #2fbe19);
+  background-image: -moz-linear-gradient(top, #29f700, #18660c);
+  background-image: -ms-linear-gradient(top, #29f700, #32b81d);
+  background-image: -o-linear-gradient(top, #29f700, #238b13);
+  background-image: linear-gradient(to bottom, #29f700, #18660c);
+  -webkit-border-radius: 15;
+  -moz-border-radius: 15;
+  border-radius: 15px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 9px 16px 10px 17px;
+  margin: 5px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn-style:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
 }

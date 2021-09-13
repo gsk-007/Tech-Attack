@@ -1,4 +1,9 @@
 "use strict";
+////////////CURR USER///////////////////
+
+let currUser = 0;
+
+////////////////////////////////////////
 // selectors
 let currStudentIndex = 0;
 const std_list = document.querySelector(".std_list");
@@ -10,12 +15,13 @@ const modal_content = document.querySelector(".modal-content");
 /////////////////////////////////////////
 
 /////////////////////////////////////////
+// STUDENT DATA
 const male_def_icon = "./../static/imgs/student_info_resource/male_icon.ico";
 const male_def_img = "./../static/imgs/student_info_resource/male_img.png";
 const female_def_icon =
   "./../static/imgs/student_info_resource/female_icon.ico";
 const female_def_img = "./../static/imgs/student_info_resource/female_img.png";
-
+// ...
 const student_info = [
   {
     name: "Akash Gupta",
@@ -102,7 +108,8 @@ const student_info = [
     skills: "1. C++ | 2. C | 3. HTML | 4. javaScript | 5. CSS",
   },
 ];
-// testing
+// TESTING DATA
+//--------------------
 student_info.push({
   name: "Shreya Singh",
   roll_no: "B420006",
@@ -132,7 +139,7 @@ student_info.push({
   ],
   skills: "1. C++ | 2. C ",
 });
-
+//--------------------
 // sorting of student_info by name
 
 student_info.sort((a, b) => {
@@ -149,7 +156,8 @@ student_info.sort((a, b) => {
 });
 
 // console.log(student_info);
-
+//////////////////////////////////////////////////////
+//ADDING USER LIST(HTML)
 student_info.forEach((curr, i) => {
   const user_list = `<tr  class = "student">
 <td style="width: 30px; padding: 0px">
@@ -200,10 +208,6 @@ ${achive}
   achive = ``;
 });
 
-/////////////////////////// EVENT LISTENERS /////////////////////////////
-const stdInfo = document.querySelectorAll(".stdInfo");
-// console.log(stdInfo);
-const student = document.querySelectorAll(".student");
 /////////////////////////// FUNCTION START /////////////////////////////
 
 const showDetails = (currstd) => {
@@ -211,6 +215,11 @@ const showDetails = (currstd) => {
 };
 
 /////////////////////////// FUNCTION END //////////////////////////////
+//------------------------------------------------------------------//
+/////////////////////////// EVENT LISTENERS //////////////////////////
+const stdInfo = document.querySelectorAll(".stdInfo");
+// console.log(stdInfo);
+const student = document.querySelectorAll(".student");
 
 // show student description
 student.forEach((curr, i) => {
