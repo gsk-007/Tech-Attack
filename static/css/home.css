@@ -1,6 +1,6 @@
 .bg {
   position: absolute;
-  height: 100%;
+  height: 110vh;
   width: 100%;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
     url("./../imgs/i2.jpg");
@@ -39,7 +39,7 @@ footer {
 }
 
 .head {
-  height: 80vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   flex-direction: row;

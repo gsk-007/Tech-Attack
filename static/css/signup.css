@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap");
 .bg {
-  height: 90vh;
+  height: 100%;
+  width: 100%;
   background: url("../imgs/signup-bg.jpg");
   background-size: cover;
 }
 main {
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
   color: white;
   /* backdrop-filter: blur(10px); */
   max-width: 45vw;
+  height: 76.5vh;
 }
 .form-container {
   display: flex;

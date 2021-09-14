@@ -69,8 +69,8 @@ a:hover {
 }
 
 footer {
-  height: 12vh;
-  background-color: rgb(6, 6, 66);
+  height: 8vh;
+  background-color: rgba(6, 6, 66, 0.5);
   color: white;
   font-family: "Roboto Mono", monospace;
 }
