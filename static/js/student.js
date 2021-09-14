@@ -1,8 +1,6 @@
 "use strict";
 ////////////CURR USER///////////////////
-
 let currUser = {};
-
 ////////////////////////////////////////
 // selectors
 let currStudentIndex = 0;
@@ -12,142 +10,7 @@ const modal = document.querySelector(".modal");
 const head = document.querySelector(".header");
 const table_wrapper = document.querySelector("#table-wrapper");
 const modal_content = document.querySelector(".modal-content");
-/////////////////////////////////////////
 
-/////////////////////////////////////////
-// STUDENT DATA
-const male_def_icon = "./../static/imgs/student_info_resource/male_icon.ico";
-const male_def_img = "./../static/imgs/student_info_resource/male_img.png";
-const female_def_icon =
-  "./../static/imgs/student_info_resource/female_icon.ico";
-const female_def_img = "./../static/imgs/student_info_resource/female_img.png";
-// ...
-const student_info = [
-  {
-    name: "Akash Gupta",
-    password: "1234",
-    roll_no: "B420001",
-    image: male_def_img,
-    image_icon: male_def_icon,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
-    achivements: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
-      "Ut at leo at sem varius venenatis.",
-    ],
-    skills: "1. C++ | 2. C | 3. HTML | 4. javaScript | 5. CSS",
-  },
-  {
-    name: "Avansh Singh",
-    password: "1234",
-    roll_no: "B420002",
-    image: male_def_img,
-    image_icon: male_def_icon,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
-    achivements: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
-      "Ut at leo at sem varius venenatis.",
-    ],
-    skills: "1. C++ | 2. C | 3. HTML | 4. java | 5. CSS",
-  },
-  {
-    name: "Bhairav Gupta",
-    password: "1234",
-    roll_no: "B420003",
-    image: male_def_img,
-    image_icon: male_def_icon,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
-    achivements: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
-      "Ut at leo at sem varius venenatis.",
-    ],
-    skills: "1. C++ | 2. C | 3. python ",
-  },
-  {
-    name: "Gursimrat Kalra",
-    password: "1234",
-    roll_no: "B420004",
-    image: male_def_img,
-    image_icon: male_def_icon,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
-    achivements: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
-      "Ut at leo at sem varius venenatis.",
-    ],
-    skills: "1. C++ | 2. C | 3. HTML | 4. javaScript | 5. CSS",
-  },
-  {
-    name: "Rajesh Raj",
-    password: "1234",
-    roll_no: "B420005",
-    image: male_def_img,
-    image_icon: male_def_icon,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
-    achivements: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
-      "Ut at leo at sem varius venenatis.",
-    ],
-    skills: "1. C++ | 2. C | 3. HTML",
-  },
-  {
-    name: "Yash Gupta",
-    password: "1234",
-    roll_no: "B420006",
-    image: male_def_img,
-    image_icon: male_def_icon,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
-    achivements: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
-      "Ut at leo at sem varius venenatis.",
-    ],
-    skills: "1. C++ | 2. C | 3. HTML | 4. javaScript | 5. CSS",
-  },
-];
-// TESTING DATA
-//--------------------
-student_info.push({
-  name: "Shreya Singh",
-  password: "1234",
-  roll_no: "B420006",
-  image: female_def_img,
-  image_icon: female_def_icon,
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
-  achivements: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
-    "Ut at leo at sem varius venenatis.",
-  ],
-  skills: "1. HTML | 2. javaScript | 3. CSS",
-});
-
-student_info.push({
-  name: "Rashmika Singh",
-  password: "1234",
-  roll_no: "B420008",
-  image: female_def_img,
-  image_icon: female_def_icon,
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer semper, lorem quis placerat rutrum, purus mauris tristique sapien, ut rhoncus ante ex a nisi. Nunc tincidunt augue dignissim augue fringilla, ac luctus urna maximus. Proin lobortis tortor et mattis facilisis. Nulla facilisi. Quisque sit amet porttitor nunc, sed fringilla elit.",
-  achivements: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Mauris sit amet dolor vitae quam mattis tincidunt in a sem.",
-    "Ut at leo at sem varius venenatis.",
-  ],
-  skills: "1. C++ | 2. C ",
-});
-//--------------------
 // sorting of student_info by name
 
 student_info.sort((a, b) => {
@@ -167,7 +30,8 @@ student_info.sort((a, b) => {
 //////////////////////////////////////////////////////
 //ADDING USER LIST(HTML)
 student_info.forEach((curr, i) => {
-  const user_list = `<tr  class = "student">
+  try {
+    const user_list = `<tr  class = "student">
 <td style="width: 30px; padding: 0px">
   <img
     class="user_thumb"
@@ -178,7 +42,10 @@ student_info.forEach((curr, i) => {
 <td>IT</td>
 <td>${curr.roll_no}</td>
 </tr>`;
-  std_list.insertAdjacentHTML("beforeend", user_list);
+    std_list.insertAdjacentHTML("beforeend", user_list);
+  } catch (err) {
+    console.log(err);
+  }
 });
 ////////////////////////////////////////////////////////////////////////
 // adding student info to modal
@@ -247,3 +114,5 @@ close_btn.addEventListener("click", () => {
   head.classList.toggle("hide");
   stdInfo[currStudentIndex].classList.toggle("hide");
 });
+
+////////////////////////////////////////////////////////

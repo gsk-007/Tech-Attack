@@ -23,13 +23,13 @@
           <li>
             <a target="_self" href="views/timetable.html">TimeTable</a>
           </li>
-          <li><a href="#">Notice Board</a></li>
-          <li><a href="#">Students</a></li>
+          <li><a href="./noticeboard.html">Notice Board</a></li>
+          <li><a href="./student.html">Students</a></li>
           <li><a href="#">To-Do</a></li>
         </ul>
         <div class="right">
-          <button class="btn">Sign Up</button>
-          <button class="btn">Login</button>
+          <button class="btn"><a href="./signup.html">Sign Up</a></button>
+          <button class="btn"><a href="./login.html">Login</a></button>
         </div>
       </nav>
     </header>
@@ -38,25 +38,26 @@
         <h1>Sign Up</h1>
         <form action="noaction.php">
           <div class="form-group">
-            <input type="text" placeholder="Enter Your Name">
+            <input class="inpName" type="text" placeholder="Enter Your Name">
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Enter Your Age">
+            <input class = "inpAge" type="text" placeholder="Enter Your Age">
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Enter Your Gender">
+            <select class="inpGen" name="gender" >
+              <option value="" disabled selected>Enter your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Enter Your Phone Number">
+            <input class = "inpId" type="text" placeholder="Enter Your College ID">
           </div>
           <div class="form-group">
-            <input type="text" placeholder="Enter Your e-mail">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Password">
+            <input class = "pass" type="text" placeholder="Password">
           </div>
         </form>
-        <button class="btn">Submit</button>
+        <button class="btn submit">Submit</button>
       </div>
     </main>
 </div>
@@ -65,9 +66,9 @@
   <p>Copyright &copy; TechAttack.com | All Rights Reservered</p>
 </footer>
 
-
-<script src="./../static/js/student.js"></script>
-<script src="./../static/js/login.js"></script>
+<script src="./../static/js/test.js"></script>
+<script src="./../static/js/signup.js"></script>
+<!-- <script src="./../static/js/login.js"></script> -->
 </body>
 
 </html>

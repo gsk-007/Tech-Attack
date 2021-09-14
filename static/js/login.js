@@ -1,10 +1,10 @@
 "use strict";
 
-const signupSubmit = document.querySelector();
+const signupSubmit = document.querySelector(".loginBtn");
 
 signupSubmit.addEventListener("click", () => {
-  const userName = `document.querySelector(".")`;
-  const userPass = `document.querySelector(".")`;
+  const userName = document.querySelector(".userName").value;
+  const userPass = document.querySelector(".userPass").value;
   function whichUser(ele) {
     return ele.name === userName;
   }
@@ -14,6 +14,6 @@ signupSubmit.addEventListener("click", () => {
   } else if (currUser.password !== userPass) {
     window.alert("WRONG PASSWORD! PLEASE RECHECK YOUR PASSWORD");
   } else {
-    window.alert(`WELCOME ${currUser.name}`);
+    window.alert(`Welcome ${currUser.name}`);
   }
 });
