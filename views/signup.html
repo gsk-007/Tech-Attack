@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+<div class="bg">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SIGNUP</title>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../static/css/signup.css">
+    <link rel="stylesheet" href="../static/css/utils.css">
   </head>
+
   <body>
-    <script src="./../static/js/student.js"></script>
-    <script src="./../static/js/signup.js"></script>
-  </body>
+    <div class="bg">
+    <header class="header">
+      <nav>
+        <div class="left">
+          <img src="./../static/imgs/logo.png" alt="Logo of IIIT BBSR" />
+        </div>
+        <ul class="navbar">
+          <li><a target="_self" href="./../index.html">Home</a></li>
+          <li>
+            <a target="_self" href="views/timetable.html">TimeTable</a>
+          </li>
+          <li><a href="#">Notice Board</a></li>
+          <li><a href="#">Students</a></li>
+          <li><a href="#">To-Do</a></li>
+        </ul>
+        <div class="right">
+          <button class="btn">Sign Up</button>
+          <button class="btn">Login</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="form-container">
+        <h1>Sign Up</h1>
+        <form action="noaction.php">
+          <div class="form-group">
+            <input type="text" placeholder="Enter Your Name">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Your Age">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Your Gender">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Your Phone Number">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Enter Your e-mail">
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Password">
+          </div>
+        </form>
+        <button class="btn">Submit</button>
+      </div>
+    </main>
+</div>
+
+<footer class="flex-all-center">
+  <p>Copyright &copy; TechAttack.com | All Rights Reservered</p>
+</footer>
+
+
+<script src="./../static/js/student.js"></script>
+<script src="./../static/js/login.js"></script>
+</body>
+
 </html>

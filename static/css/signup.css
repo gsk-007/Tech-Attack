@@ -1,0 +1,19 @@
+.bg{
+    height: 80vh;
+}
+main{
+   /* margin: auto; */
+  margin-top: 20px;
+    
+    
+}
+.form-container{
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.form-group{
+    padding: 10px;
+}
