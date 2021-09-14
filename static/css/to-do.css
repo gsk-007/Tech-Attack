@@ -135,7 +135,7 @@ main {
 }
 
 h1 {
-  font-family: Atomic Age, display;
+/*   font-family: Atomic Age, display; */
   font-size: 44px;
   font-weight: bold;
   color: rgba(254, 255, 254, 0.883);
