@@ -1,77 +1,76 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.flex-all-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.flex-all-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav {
-    display: flex;
-    height: 12vh;
-  }
-  .left img {
-    border-radius: 10px;
-    margin: 10px;
-    height: 80%;
-    width: 80%;
-  }
-  .navbar {
-    height: 5vh;
-    width: 70vw;
-    margin: 15px 0;
-    padding-left: 0;
-    display: flex;
-  }
-  .navbar li {
-    list-style: none;
-    padding: 5px 10px;
-    font-size: 20px;
-  }
-  .navbar li a {
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  
-  .navbar li a:hover {
-    text-decoration: underline;
-    text-shadow: 5px 5px 15px rgb(51, 39, 219);
-  }
-  
-  .btn {
-    margin: 18px 8px;
-    margin-right: 20px;
-    background-color: transparent;
-    border-radius: 12px;
-    border: 2px solid #0c1575;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Trebuchet MS;
-    font-size: 15px;
-    font-weight: bold;
-    padding: 6px 17px;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-  
-  .btn:hover {
-    background-color: transparent;
-    transform: scale(1.1);
-    box-shadow: 2px 2px 10px 0 #4f5cec;
-  }
-  
-  .header {
-    background-color: rgba(65, 63, 63, 0.281);
-  }
+  display: flex;
+  height: 12vh;
+}
+.left img {
+  border-radius: 10px;
+  margin: 10px;
+  height: 80%;
+  width: 80%;
+}
+.navbar {
+  height: 5vh;
+  width: 70vw;
+  margin: 15px 0;
+  padding-left: 0;
+  display: flex;
+}
+.navbar li {
+  list-style: none;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
 
-  footer {
-    height: 12vh;
-    background-color: rgb(15, 15, 59);
-    color: white;
-    font-family: "Roboto Mono", monospace;
-  }
+a:hover {
+  text-decoration: underline;
+  text-shadow: 5px 5px 15px rgb(51, 39, 219);
+}
+
+.btn {
+  margin: 18px 8px;
+  margin-right: 20px;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 2px solid #e2e3ec;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Trebuchet MS;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 17px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: transparent;
+  transform: scale(1.1);
+  box-shadow: 2px 2px 10px 0 #4f5cec;
+}
+
+.header {
+  background-color: rgba(65, 63, 63, 0.281);
+}
+
+footer {
+  height: 12vh;
+  background-color: rgb(6, 6, 66);
+  color: white;
+  font-family: "Roboto Mono", monospace;
+}

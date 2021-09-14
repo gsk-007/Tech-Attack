@@ -8,36 +8,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="../static/css/login.css">
+    <link rel="stylesheet" href="./../static/css/utils.css">
   </head>
 </html>
     <div class="bg">
+      <header class="header">
+        <nav>
+          <div class="left">
+            <img src="./../static/imgs/logo.png" alt="Logo of IIIT BBSR" />
+          </div>
+          <ul class="navbar">
+            <li><a target="_self" href="./../index.html">Home</a></li>
+            <li>
+              <a target="_self" href="./timetable.html">TimeTable</a>
+            </li>
+            <li><a target="_self" href="./noticeboard.html">Notice Board</a></li>
+            <li><a target="_self" href="./student.html">Students</a></li>
+            <li><a target="_self" href="./to-do.html">To-Do</a></li>
+          </ul>
+          <div class="right">
+            <button class="btn"><a target="_self" href="./signup.html">Sign Up</a></button>
+            <button class="btn"><a target="_self" href="./login.html">Login</a></button>
+          </div>
+        </nav>
+      </header>
       <div class="form-container">
         <h1>Login</h1>
         <form action="noaction.php">
           <div class="form-group">
-<<<<<<< HEAD
-            <input class = "userName" type="text" placeholder="Enter Your Name">
+            <input class = "userName" type="text" placeholder="Name of Student">
           </div>
           <div class="form-group">
-            <input class = "userPass" type="text" placeholder="Password">
-=======
-            <input type="text" placeholder="Enter Your Name">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Password">
->>>>>>> 9495e3e21bd1747f599a94f6ab0931320122a04a
+            <input class = "userPass" type="text" placeholder="Password (byDefault : 1234)">
           </div>
         </form>
         <button class="btn loginBtn">Submit</button>
       </div>
-  
-</div>
-<<<<<<< HEAD
+      <!-- ==============MODAL ============== -->
+      
+      <div id="myModal" class="modal hide">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h1>ENTER THE DETAILS YOU WANT TO EDIT</h1>
+          <select class ="edit" name="" >
+            <option value="skills">Skills</option>
+            <option value="description">Description</option>
+            <option value="roll_no">Roll_No</option>
+            <option value="password">Password</option>
+          </select>
+          <input class = "change" type="text">
+          <button class="editBtn">EDIT</button>
+          <button class = "editBtn showDet">SHOW UPDATED DETAILS</button>
+          <div class = "currDet"></div>
+        </div>
+      </div>
+      <!-- ==============MODAL END============== -->
+    </div>
+    <footer style="display: flex; justify-content: center;align-items: center;"class="f">
+      <p>Copyright &copy; TechAttack.com | All Rights Reservered</p>
+    </footer>
 <script src="./../static/js/test.js"></script>
-=======
-
-<script src="./../static/js/student.js"></script>
->>>>>>> 9495e3e21bd1747f599a94f6ab0931320122a04a
 <script src="./../static/js/login.js"></script>
 </body>
 

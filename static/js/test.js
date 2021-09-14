@@ -1,5 +1,8 @@
 /////////////////////////////////////////
 // STUDENT DATA
+
+let currUser = {};
+
 const male_def_icon = "./../static/imgs/student_info_resource/male_icon.ico";
 const male_def_img = "./../static/imgs/student_info_resource/male_img.png";
 const female_def_icon =
