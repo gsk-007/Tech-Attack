@@ -74,3 +74,49 @@ footer {
   color: white;
   font-family: "Roboto Mono", monospace;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  nav {
+    display: flex;
+    height: auto;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+  }
+  .head {
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .left img {
+    height: 50px;
+    width: 50px;
+    margin-right: 50px;
+  }
+  .navbar li {
+    width: 100%;
+  }
+  .navbar {
+    height: auto;
+    width: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+  }
+  .hd2 {
+    display: inline;
+  }
+  .bg {
+    height: 100%;
+  }
+  footer {
+    padding-top: 10px;
+    margin-top: 78px;
+  }
+}
