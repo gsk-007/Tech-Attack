@@ -25,6 +25,7 @@ const female_def_img = "./../static/imgs/student_info_resource/female_img.png";
 const student_info = [
   {
     name: "Akash Gupta",
+    password: "1234",
     roll_no: "B420001",
     image: male_def_img,
     image_icon: male_def_icon,
@@ -39,6 +40,7 @@ const student_info = [
   },
   {
     name: "Avansh Singh",
+    password: "1234",
     roll_no: "B420002",
     image: male_def_img,
     image_icon: male_def_icon,
@@ -53,6 +55,7 @@ const student_info = [
   },
   {
     name: "Bhairav Gupta",
+    password: "1234",
     roll_no: "B420003",
     image: male_def_img,
     image_icon: male_def_icon,
@@ -67,6 +70,7 @@ const student_info = [
   },
   {
     name: "Gursimrat Kalra",
+    password: "1234",
     roll_no: "B420004",
     image: male_def_img,
     image_icon: male_def_icon,
@@ -81,6 +85,7 @@ const student_info = [
   },
   {
     name: "Rajesh Raj",
+    password: "1234",
     roll_no: "B420005",
     image: male_def_img,
     image_icon: male_def_icon,
@@ -95,6 +100,7 @@ const student_info = [
   },
   {
     name: "Yash Gupta",
+    password: "1234",
     roll_no: "B420006",
     image: male_def_img,
     image_icon: male_def_icon,
@@ -112,6 +118,7 @@ const student_info = [
 //--------------------
 student_info.push({
   name: "Shreya Singh",
+  password: "1234",
   roll_no: "B420006",
   image: female_def_img,
   image_icon: female_def_icon,
@@ -127,6 +134,7 @@ student_info.push({
 
 student_info.push({
   name: "Rashmika Singh",
+  password: "1234",
   roll_no: "B420008",
   image: female_def_img,
   image_icon: female_def_icon,
