@@ -1,0 +1,23 @@
+{
+  "name": "Tech-Attack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsk-007/Tech-Attack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsk-007/Tech-Attack/issues"
+  },
+  "homepage": "https://github.com/gsk-007/Tech-Attack#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
