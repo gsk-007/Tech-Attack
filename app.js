@@ -2,7 +2,7 @@ const express = require('express')
 const path = require('path')
 const app = express()
 //const bodyparser = require('body-parser')
-const port = 8000
+const port = process.env.PORT
 
 app.use('/static',express.static('static'))
 app.use(express.urlencoded())
