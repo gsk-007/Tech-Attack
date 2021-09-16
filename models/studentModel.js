@@ -7,6 +7,23 @@ const studentSchema = new mongoose.Schema({
   },
   password: { type: Number },
   roll_no: { type: String },
+  age: { type: Number },
+  gender: { type: String },
+  email: { type: String },
+  description: {
+    type: String,
+    default:
+      "I am a student of IIIT Bhubaneshwar pursuing Btech under IT branch.",
+  },
+  achievement: {
+    type: String,
+    default: "",
+  },
+  skills: { type: String },
+  img_url: {
+    type: String,
+    default: "./../../static/imgs/student_info_resource/male_img.png",
+  },
 });
 
 const Student = new mongoose.model("Student", studentSchema);
