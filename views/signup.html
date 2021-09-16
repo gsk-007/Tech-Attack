@@ -36,31 +36,31 @@
     <main>
       <div class="form-container">
         <h1>Sign Up</h1>
-        <form  action="noaction.php">
+        <form  action="/signup.html" method="POST" style="text-align: center;">
           <div class="form-group">
-            <input class="inpName" type="text" placeholder="Enter Your Name">
+            <input class="inpName" type="text" name = "name"placeholder="Enter Your Name" required>
           </div>
           <div class="form-group">
-            <input class = "inpAge" type="text" placeholder="Enter Your Age">
+            <input class = "inpAge" name="age" type="number" placeholder="Enter Your Age" required>
           </div>
           <div class="form-group">
-            <input class = "inpEmail" type="email" placeholder="Enter College Email Id">
+            <input class = "inpEmail" type="email" name = "email"placeholder="Enter College Email Id" required>
           </div>
           <div class="form-group">
-            <select class="inpGen" name="gender" >
+            <select class="inpGen" name="gender" required>
               <option  value="" disabled selected><span style="color:black">Enter your gender</span></option>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
           </div>
           <div class="form-group">
-            <input class = "inpId" type="text" placeholder="Enter Your College ID">
+            <input class = "inpId" type="text" name = "roll_no" placeholder="Enter Your College ID" required>
           </div>
           <div class="form-group">
-            <input class = "pass" type="text" placeholder="Password">
+            <input class = "pass" type="password" name = "password" placeholder="Password" required>
           </div>
+          <button class="btn submit" type="submit">Submit</button>
         </form>
-        <button class="btn submit">Submit</button>
       </div>
     </main>
 

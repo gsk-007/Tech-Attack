@@ -47,6 +47,7 @@
               class="student-img"
               src="./../../static/imgs/student_info_resource/male_img.png"
             />
+            <!-- change src with ejs curr.img_url at push -->
             <h2><%= curr.name %></h2>
             <br />
             <p><%= curr.description %></p>
@@ -55,13 +56,13 @@
             <br />
             <h3>ACHIEVEMENTS</h3>
             <br />
-            <h2>NOTING!!!</h2>
+            <h2><%= curr.achievement %></h2>
             <br />
             <hr />
             <br />
             <h3>SKILLS</h3>
             <br />
-            <h4><p>SIKH RHE ABHI BRO</p></h4>
+            <h4><%= curr.skills %></h4>
           </div>
           <% }); %>
         </div>

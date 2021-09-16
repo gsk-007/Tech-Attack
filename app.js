@@ -59,6 +59,8 @@ app.get("/signup.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/signup.html"));
 });
 
+app.post("/signup.html", pageController.signUp);
+
 app.get("/login.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/login.html"));
 });

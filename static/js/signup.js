@@ -1,6 +1,7 @@
 "use strict";
 const loginsubmit = document.querySelector(".submit");
-
+// ============ CODE FOR TEMPORARY FRONTENT DATA VALIDATION =============== //
+/*
 loginsubmit.addEventListener("click", () => {
   const stdInputName = document.querySelector(".inpName").value;
   const stdInputPass = document.querySelector(".pass").value;
@@ -36,3 +37,4 @@ loginsubmit.addEventListener("click", () => {
     window.alert("PLEASE FILL ALL DETAILS BEFORE SUBMITTING");
   }
 });
+*/
