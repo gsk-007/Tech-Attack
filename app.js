@@ -3,9 +3,13 @@ const path = require("path");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const app = express();
-// const bodyparser = require("body-parser");
-
+//--------router--------//
+const studentRouter = require("./routes/studentRoute");
+// ---
+const pageController = require("./controllers/pageController");
 dotenv.config({ path: "./config.env" });
+
+// MONGO ATLAS CONNECT
 
 const DB = process.env.DATABASE.replace(
   "<PASSWORD>",
@@ -15,8 +19,6 @@ const DB = process.env.DATABASE.replace(
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
-    // useCreateIndex: true,
-    // useFindAndModify: false,
   })
   .then(() => {
     console.log("DB connected successfully");
@@ -25,7 +27,12 @@ mongoose
     console.log(err);
   });
 
+// ---
+// SETTING VIEW ENGINE EJS
+app.set("view engine", "ejs");
+
 const port = process.env.PORT || 3000;
+app.use(express.json());
 app.use("/static", express.static("static"));
 app.use(express.urlencoded({ extended: true }));
 
@@ -33,24 +40,31 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/index.html"));
 });
+
 app.get("/timetable.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/timetable.html"));
 });
+
 app.get("/noticeboard.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/noticeboard.html"));
 });
-app.get("/student.html", (req, res) => {
-  res.sendFile(path.join(__dirname, "/views/student.html"));
-});
+
+app.get("/student.html", pageController.studentView);
+
 app.get("/to-do.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/to-do.html"));
 });
+
 app.get("/signup.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/signup.html"));
 });
+
 app.get("/login.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/login.html"));
 });
+
+// STUDENT API ROUTES
+app.use("/api/v1/students", studentRouter);
 
 //Start the server
 app.listen(port, () => {

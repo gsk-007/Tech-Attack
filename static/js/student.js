@@ -11,8 +11,43 @@ const head = document.querySelector(".header");
 const table_wrapper = document.querySelector("#table-wrapper");
 const modal_content = document.querySelector(".modal-content");
 
-// sorting of student_info by name
+/////////////////////////// FUNCTION START /////////////////////////////
 
+const showDetails = (currstd) => {
+  stdInfo[currstd].classList.toggle("hide");
+};
+
+/////////////////////////// FUNCTION END //////////////////////////////
+//------------------------------------------------------------------//
+/////////////////////////// EVENT LISTENERS //////////////////////////
+const stdInfo = document.querySelectorAll(".stdInfo");
+// console.log(stdInfo);
+const student = document.querySelectorAll(".student");
+
+// show student description
+student.forEach((curr, i) => {
+  curr.addEventListener("click", () => {
+    table_wrapper.classList.toggle("hide");
+    head.classList.toggle("hide");
+    modal.classList.toggle("hide");
+    showDetails(i);
+    currStudentIndex = i;
+  });
+});
+
+// close modal
+close_btn.addEventListener("click", () => {
+  modal.classList.toggle("hide");
+  table_wrapper.classList.toggle("hide");
+  head.classList.toggle("hide");
+  stdInfo[currStudentIndex].classList.toggle("hide");
+});
+
+////////////////////////////////////////////////////////
+
+// ======= TEMPORARY FRONTEND DISPLAY CODE ======== //
+/*
+// sorting of student_info by name
 student_info.sort((a, b) => {
   var nameA = a.name.toUpperCase();
   var nameB = b.name.toUpperCase();
@@ -26,7 +61,6 @@ student_info.sort((a, b) => {
   return 0;
 });
 
-// console.log(student_info);
 //////////////////////////////////////////////////////
 //ADDING USER LIST(HTML)
 student_info.forEach((curr, i) => {
@@ -82,37 +116,4 @@ ${achive}
   modal_content.insertAdjacentHTML("beforeend", std_info);
   achive = ``;
 });
-
-/////////////////////////// FUNCTION START /////////////////////////////
-
-const showDetails = (currstd) => {
-  stdInfo[currstd].classList.toggle("hide");
-};
-
-/////////////////////////// FUNCTION END //////////////////////////////
-//------------------------------------------------------------------//
-/////////////////////////// EVENT LISTENERS //////////////////////////
-const stdInfo = document.querySelectorAll(".stdInfo");
-// console.log(stdInfo);
-const student = document.querySelectorAll(".student");
-
-// show student description
-student.forEach((curr, i) => {
-  curr.addEventListener("click", () => {
-    table_wrapper.classList.toggle("hide");
-    head.classList.toggle("hide");
-    modal.classList.toggle("hide");
-    showDetails(i);
-    currStudentIndex = i;
-  });
-});
-
-// close modal
-close_btn.addEventListener("click", () => {
-  modal.classList.toggle("hide");
-  table_wrapper.classList.toggle("hide");
-  head.classList.toggle("hide");
-  stdInfo[currStudentIndex].classList.toggle("hide");
-});
-
-////////////////////////////////////////////////////////
+*/

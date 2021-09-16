@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../static/css/student.css" />
+    <link rel="stylesheet" href="./../static/css/utils.css" />
+    <title>Student Info</title>
+  </head>
+  <body>
+    <div class="bg">
+      <header class="header">
+        <nav>
+          <div class="left">
+            <img src="./../static/imgs/logo.png" alt="Logo of IIIT BBSR" />
+          </div>
+          <ul class="navbar">
+            <li><a target="_self" href="./">Home</a></li>
+            <li>
+              <a target="_self" href="./timetable.html">TimeTable</a>
+            </li>
+            <li>
+              <a target="_self" href="./noticeboard.html">Notice Board</a>
+            </li>
+            <li><a target="_self" href="./student.html">Students</a></li>
+            <li><a target="_self" href="./to-do.html">To-Do</a></li>
+          </ul>
+          <div class="right">
+            <button class="btn">
+              <a target="_self" href="./signup.html">Sign Up</a>
+            </button>
+            <button class="btn">
+              <a target="_self" href="./login.html">Login</a>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <!--=========================---------------- MODAL--------------================ -->
+      <div id="myModal" class="modal hide">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <%stdData.forEach((curr)=>{%>
+          <div class="hide stdInfo">
+            <img
+              class="student-img"
+              src="./../../static/imgs/student_info_resource/male_img.png"
+            />
+            <h2><%= curr.name %></h2>
+            <br />
+            <p><%= curr.description %></p>
+            <br />
+            <hr style="margin-top: 15px" />
+            <br />
+            <h3>ACHIEVEMENTS</h3>
+            <br />
+            <h2>NOTING!!!</h2>
+            <br />
+            <hr />
+            <br />
+            <h3>SKILLS</h3>
+            <br />
+            <h4><p>SIKH RHE ABHI BRO</p></h4>
+          </div>
+          <% }); %>
+        </div>
+      </div>
+      <!--=========================---------------- MODAL - END--------------================ -->
+
+      <!--=========================---------------- TABLE --------------================ -->
+
+      <div class="" id="table-wrapper">
+        <div id="table-scroll">
+          <table>
+            <thead>
+              <tr class="text">
+                <th class="text"></th>
+                <th><span class="text">Name</span></th>
+                <th><span class="text">Branch</span></th>
+                <th><span class="text">Roll No.</span></th>
+              </tr>
+            </thead>
+            <tbody class="std_list">
+              <%stdData.forEach((curr)=>{%>
+              <tr class="student">
+                <td style="width: 30px; padding: 0px">
+                  <img
+                    class="user_thumb"
+                    src="./../../static/imgs/student_info_resource/male_icon.ico"
+                  />
+                </td>
+                <td><%= curr.name %></td>
+                <td>IT</td>
+                <td><%=curr.roll_no %></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--=========================---------------- TABLE - END --------------================ -->
+    </div>
+    <!-- <script src="./../static/js/test.js"></script> -->
+    <script src="./../static/js/student.js"></script>
+  </body>
+</html>
