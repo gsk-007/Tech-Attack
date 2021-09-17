@@ -1,33 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap");
+body{
+    background-image: url('../imgs/students-bg4.jpg');
+    background-size: cover;
+}
 main{
-    height: 80vh;
+    height: 100vh;
+}
+.heading{
+    text-decoration: underline;
+    font-weight: bold;
 }
  .top{
     background-color: red;
     height: 35vh;
    display: flex;
+   background-image: url('../imgs/img5.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
 }
 .top img{
     height: 150px;
     width: 200px;
-    margin-top: 22vh;
+    margin-top: 20vh;
     padding-left: 50px;
     z-index: +20;
 }
 .top .info-container{
     margin-left: 15vw;
     max-width: 50vw;
-    margin-top: 20px;
+    margin-top: 13px;
+    /* font-family: "Baloo Bhai 2", cursive; */
+    font-family: "Baloo Bhai 2", cursive;
 }
 .top .user-info{
-    margin: 5px 10px;
+    margin: 0 10px;
     display: flex;
 }
 .mid-container{
     display: flex;
+    background-image: url('../imgs/img3.jpg');
+    background-size: cover;
+    font-family: "Baloo Bhai 2", cursive;
+    height: 65vh;
 }
 .left-container{
-    background-color: aqua;
-    height: 45vh;
+    /* background-color: aqua; */
     max-width: 35vw;
     float: left;
 }
@@ -43,7 +60,29 @@ main{
 }
 
 .right-container{
-    background-color: chartreuse;
-    height: 45vh;
+    /* background-color: chartreuse; */
     width: 65vw;
+}
+.right-container #edit-info-btn{
+    outline: 0;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px 6px;
+    margin-left: 5px;
+}
+.hidden{
+    display: none;
+}
+main .input-field{
+    height: 25px;
+    width: 30vw;
+}
+
+/* ================== Second Display========================================== */
+
+.second-display{
+margin-top: 30vh;
+max-width: 50vw;
+margin: 30vh auto 0;
 }
