@@ -39,29 +39,30 @@
       <div class="top">
         <img src="../static/imgs/student_info_resource/male_img.png" alt="" />
         <div class="info-container">
-          <div class="user-info">Name : <%= docs.name %></div>
-          <div class="user-info">Age :<%= docs.age %></div>
-          <div class="user-info">Password :<%= docs.password %></div>
-          <div class="user-info">Roll No. :<%= docs.roll_no %></div>
-          <div class="user-info">Email :<%= docs.email %></div>
+          <div class="user-info">Name : <%= docs[0].name %></div>
+          <div class="user-info">Age :<%= docs[0].age %></div>
+          <div class="user-info">Password :<%= docs[0].password %></div>
+          <div class="user-info">Roll No. :<%= docs[0].roll_no %></div>
+          <div class="user-info">Email :<%= docs[0].email %></div>
         </div>
       </div>
       <div class="mid-container">
         <div class="left-container">
           <div class="info-container">
             <div class="user-info">Description:</div>
-            <div class="user-info"><%= docs.description %></div>
+            <div class="user-info"><%= docs[0].description %></div>
           </div>
         </div>
         <div class="right-container">
           <div class="info-container">
             <div class="user-info">Skills</div>
-            <% docs.skills.forEach((curr){ %>
-            <div class="user-info">curr</div>
+            <% docs[0].skills.forEach((curr)=>{ %>
+            <div class="user-info"><%=curr%></div>
             <%});%>
+
             <div class="user-info">Achievements</div>
-            <% docs.achievement.forEach((curr){ %>
-            <div class="user-info">curr</div>
+            <% docs[0].achievement.forEach((curr)=>{ %>
+            <div class="user-info"><%=curr%></div>
             <%});%>
             <button id="edit-info-btn">Edit Info</button>
           </div>

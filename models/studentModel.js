@@ -6,7 +6,7 @@ const studentSchema = new mongoose.Schema({
     required: [true, "name required"],
   },
   password: { type: String },
-  roll_no: { type: String },
+  roll_no: { type: String, unique: [true, "THIS ROLL NUMBER ALREADY EXISTS"] },
   age: { type: Number },
   gender: { type: String },
   email: { type: String },
@@ -15,11 +15,13 @@ const studentSchema = new mongoose.Schema({
     default:
       "I am a student of IIIT Bhubaneshwar pursuing Btech under IT branch.",
   },
-  achievement: {
-    type: String,
-    default: "",
-  },
-  skills: { type: String },
+  achievement: [
+    {
+      type: String,
+      default: "",
+    },
+  ],
+  skills: [{ type: String }],
   img_url: {
     type: String,
     default: "./../../static/imgs/student_info_resource/male_img.png",

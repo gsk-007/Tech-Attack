@@ -1,4 +1,7 @@
 "use strict";
+
+//=============== FOR TEMPORARY FRONTEND DISPLAY ============= //
+/*
 const foot = document.querySelector(".f");
 const form_cont = document.querySelector(".form-container");
 const nav = document.querySelector(".header");
@@ -110,3 +113,4 @@ ${ach}
   currDet.insertAdjacentHTML("afterbegin", data);
   ach = ``;
 });
+*/

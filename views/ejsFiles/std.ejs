@@ -54,15 +54,19 @@
             <br />
             <hr style="margin-top: 15px" />
             <br />
-            <h3>ACHIEVEMENTS</h3>
+            <h2>ACHIEVEMENTS</h2>
             <br />
-            <h2><%= curr.achievement %></h2>
+            <% curr.achievement.forEach((ele,i)=>{ %>
+            <h3><%= i+1 %>. <%= ele %></h3>
             <br />
+            <% }); %>
             <hr />
             <br />
             <h3>SKILLS</h3>
             <br />
-            <h4><%= curr.skills %></h4>
+            <% curr.skills.forEach((e,i)=>{ %>
+            <h4><%= i+1%><%=") "%><%= e %></h4>
+            <% }); %>
           </div>
           <% }); %>
         </div>
