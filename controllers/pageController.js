@@ -51,7 +51,7 @@ exports.signUp = async (req, res) => {
       };
       res.render("./ejsFiles/errorPage.ejs", { errObj });
     } else {
-      // const newStudent = await Student.create(formData);
+      const newStudent = await Student.create(formData);
       res.sendFile(path.join(__dirname, "/../views/login.html"));
     }
   } catch (err) {
@@ -65,7 +65,7 @@ exports.signUp = async (req, res) => {
 };
 
 // ================= LOGIN CONTROLLER FUNCTION ================= //
-
+let currUser = "";
 exports.logIn = async (req, res) => {
   let errObj = {};
   try {
@@ -87,6 +87,7 @@ exports.logIn = async (req, res) => {
           };
           res.render("./ejsFiles/errorPage.ejs", { errObj });
         } else {
+          currUser = docs[0];
           res.render("./ejsFiles/userDashboard.ejs", { docs });
         }
       } catch (err) {
@@ -105,5 +106,68 @@ exports.logIn = async (req, res) => {
       who: "! ! !",
     };
     res.render("./ejsFiles/errorPage.ejs", { errObj });
+  }
+};
+
+// ================= UPDATE DATA CONTROLLER FUNCTION ================= //
+
+exports.editData = async (req, res) => {
+  try {
+    const tempBody = req.body;
+    let sendBody = {};
+    if (tempBody.skills[0] !== undefined) {
+      if (tempBody.skills[0] != "") {
+        sendBody.skills = tempBody.skills;
+      }
+    } else {
+      if (tempBody.skills !== "") {
+        sendBody.skills = [tempBody.skills];
+      }
+    }
+    if (tempBody.age !== "") {
+      sendBody.age = Number(tempBody.age);
+    }
+    if (tempBody.description !== "") {
+      sendBody.description = tempBody.description;
+    }
+    if (tempBody.password !== "") {
+      sendBody.password = tempBody.password;
+    }
+    if (tempBody.achievement[0] !== undefined) {
+      if (tempBody.achievement[0] !== "") {
+        sendBody.achievement = tempBody.achievement;
+      }
+    } else {
+      if (tempBody.achievement !== "") {
+        sendBody.achievement = [tempBody.achievement];
+      }
+    }
+    const updatedStudent = await Student.findByIdAndUpdate(
+      currUser._id,
+      sendBody
+    );
+    if (updatedStudent !== null) {
+      const stdData = await Student.find();
+      stdData.sort((a, b) => {
+        var nameA = a.name.toUpperCase();
+        var nameB = b.name.toUpperCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      });
+      res.render("./ejsFiles/std.ejs", { stdData });
+    } else {
+      let errObj = {
+        message: `SOMETHING WENT WRONG`,
+        who: "KINDLY LOGIN AGAIN",
+      };
+      res.render("./ejsFiles/errorPage.ejs", { errObj });
+    }
+  } catch (err) {
+    console.log(err);
   }
 };

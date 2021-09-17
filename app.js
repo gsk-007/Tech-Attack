@@ -65,7 +65,8 @@ app.get("/login.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/login.html"));
 });
 
-app.post("/login.html", pageController.logIn);
+app.post("/userPage", pageController.logIn);
+app.post("/editData", pageController.editData);
 
 // STUDENT API ROUTES
 app.use("/api/v1/students", studentRouter);

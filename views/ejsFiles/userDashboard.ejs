@@ -36,36 +36,74 @@
       </nav>
     </header>
     <main>
+    <div class="first-display">
       <div class="top">
         <img src="../static/imgs/student_info_resource/male_img.png" alt="" />
         <div class="info-container">
-          <div class="user-info">Name : <%= docs[0].name %></div>
-          <div class="user-info">Age :<%= docs[0].age %></div>
-          <div class="user-info">Password :<%= docs[0].password %></div>
-          <div class="user-info">Roll No. :<%= docs[0].roll_no %></div>
-          <div class="user-info">Email :<%= docs[0].email %></div>
+          <div class="user-info"><span class="heading"> Name </span><%=` :  `%>  <%= docs[0].name %></div>
+          <div class="user-info"><span class="heading"> Age </span><%=` :  `%><%= docs[0].age %></div>
+          <div class="user-info"><span class="heading"> Password </span><%=` :  `%><%= docs[0].password %></div>
+          <div class="user-info"><span class="heading"> Roll No. </span><%=` :  `%><%= docs[0].roll_no %></div>
+          <div class="user-info"><span class="heading"> Email </span><%=` :  `%><%= docs[0].email %></div>
         </div>
       </div>
       <div class="mid-container">
         <div class="left-container">
           <div class="info-container">
-            <div class="user-info">Description:</div>
+            <div class="user-info heading">Description:</div>
             <div class="user-info"><%= docs[0].description %></div>
           </div>
         </div>
         <div class="right-container">
           <div class="info-container">
-            <div class="user-info">Skills</div>
-            <% docs[0].skills.forEach((curr)=>{ %>
-            <div class="user-info"><%=curr%></div>
+            <div class="user-info heading">Skills</div>
+            <% docs[0].skills.forEach((curr,i)=>{ %>
+            <div class="user-info"><%=`${i+1}. ${curr}`%></div>
             <%});%>
 
-            <div class="user-info">Achievements</div>
-            <% docs[0].achievement.forEach((curr)=>{ %>
-            <div class="user-info"><%=curr%></div>
+            <div class="user-info heading">Achievements</div>
+            <% docs[0].achievement.forEach((curr,i)=>{ %>
+            <div class="user-info"><%=`${i+1}. ${curr}`%></div>
             <%});%>
-            <button id="edit-info-btn">Edit Info</button>
-          </div>
+            <button class="mybtn" id="edit-info-btn">Edit Info</button>
+          </div><span>
+        </div>
+      </div>
+    </div>
+      <div class="second-display hidden">
+        <div class="form-group">
+          <h1 style="margin-bottom: 20px;">ENTER THE DETAILS <span style="cursor: pointer; color: #000;"class="close">&times;</span> YOU WANT TO EDIT</h1>
+        <form class = "form" action="/editData" method="POST">
+          
+          <table>
+            <tr >
+              <td><label for="">SKILLS : </label></td>
+              <td class = "skillInput"><input  class="info change" type="text" name="skills" /></td>
+            </tr>
+            <tr>
+              <td><label for="">AGE : </label></td>
+              <td><input  class="info change" type="number" name="age" /></td>
+            </tr>
+            <tr>
+              <td><label  for="">ACHIEVEMENTS : </label></td>
+              <td class = "achiInput"><input  class="info change" type="text" name="achievement" /></td>
+            </tr>
+            <tr>
+              <td><label for="">DESCRIPTION : </label></td>
+              <td><input  class="info change" type="text" name="description" /></td>
+            </tr>
+            <tr>
+              <td><label for="">PASSWORD : </label></td>
+              <td><input  class="info change" type="text" name="password" /></td>
+            </tr>
+          </table>
+          <button style="margin-top:7px; margin-bottom: 7px ;" class="sty" id="show-details">
+            EDIT DETAILS
+          </button >
+        </form>
+        <button class="addSkill sty" style="margin-bottom: 17px; margin-right: 9px;">+ADD SKILL+</button>
+        <button class="addAchi sty" style="margin-bottom: 17px;">+ADD ACHIEVEMENT+</button>
+          <div class="currDet"></div>
         </div>
       </div>
     </main>
@@ -73,5 +111,6 @@
     <footer class="flex-all-center">
       <p>Copyright &copy; TechAttack.com | All Rights Reservered</p>
     </footer>
+    <script src="./../../static/js/userdashboard.js"></script>
   </body>
 </html>
