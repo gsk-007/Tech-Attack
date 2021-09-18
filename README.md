@@ -1,15 +1,15 @@
-# Tech-Attack
+# ⚔Tech-Attack⚔
 ### [Website](https://tapri.herokuapp.com/)
-<br>
+<hr>
 
-# Tech Stach<br>
+# 🛠Tech Stack<br>
  ### Frontend - HTML, CSS, Javascript<br>
  ### Backend - Node.js<br>
  ### DataBase - MongoDB Atlas
  <br><hr>
- #### Checkout the project in your local
- ##### 1.Clone the repo
- ##### 2.run npm install to install the dependencies of dependencies of ...oo
+ ### Checkout the project in your local
+ #### 1.Clone the repo
+ #### 2.Run npm install to install the dependencies of the project.
  <br><hr>
- ## Happy Coding!
+ ## Happy Coding!😀
  
