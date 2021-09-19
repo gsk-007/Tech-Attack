@@ -129,3 +129,9 @@ caption {
     width: 95%;
   }
 }
+@media (max-width: 825px){
+ 
+  .head{
+    margin-top: 24vh;
+  }
+}

@@ -20,7 +20,7 @@ nav {
 }
 .navbar {
   height: 5vh;
-  width: 70vw;
+  width: 70%;
   margin: 15px 0;
   padding-left: 0;
   display: flex;
@@ -41,10 +41,13 @@ a:hover {
   text-decoration: underline;
   text-shadow: 5px 5px 15px rgb(51, 39, 219);
 }
+.right{
+  margin-right: 5%;
+  width: 25%;
+}
 
 .btn {
-  margin: 18px 8px;
-  margin-right: 20px;
+  margin: 15px 8px;
   background-color: transparent;
   border-radius: 12px;
   border: 2px solid #e2e3ec;
@@ -53,10 +56,11 @@ a:hover {
   font-family: Trebuchet MS;
   font-size: 15px;
   font-weight: bold;
-  padding: 6px 17px;
+  padding: 6px 10px;
   text-decoration: none;
   transition: all 0.2s;
 }
+
 
 .btn:hover {
   background-color: transparent;
@@ -75,48 +79,115 @@ footer {
   font-family: "Roboto Mono", monospace;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  nav {
-    display: flex;
-    height: auto;
-    flex-wrap: nowrap;
-    align-items: center;
-    flex-direction: column;
-  }
-  .head {
-    height: 30vh;
-    display: flex;
-    flex-direction: row;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .left img {
-    height: 50px;
-    width: 50px;
-    margin-right: 50px;
-  }
-  .navbar li {
-    width: 100%;
-  }
+.toggle-button {
+  /* color: white; */
+  position: absolute;
+  margin-top: 20px;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  z-index: +20;
+}
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 825px){
+  
   .navbar {
-    height: auto;
-    width: auto;
-    margin: auto;
+    margin-top: 12vh;
+    height: fit-content;
+    display: none;
+    width: 170vw;
+    background-color: rgba(65, 63, 63, 0.281);
+    margin-left: -10%;
+
+}
+.right{
+  display: none;
+}
+  .toggle-button {
+    display: flex;
+}
+.navbar ul {
+    width: 100%;
+    flex-direction: column;
+    
+}
+.navbar ul li {
+    text-align: center;
+    
+}
+
+.navbar ul li a {
+    padding: .5rem 1rem;
+}
+
+.active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0px;
-  }
-  .hd2 {
-    display: inline;
-  }
-  .bg {
-    height: 100%;
-  }
-  footer {
-    padding-top: 10px;
-    margin-top: 78px;
-  }
+    justify-content: center;
+}
+
+.head{
+  font-size: 90%;
+  padding: 10px 10px;
+}
+.hd1{
+  margin-top: 40px;
+}
+}
+
+
+@media (max-width: 410px){
+  .navbar {
+    margin-top: 12vh;
+    height: fit-content;
+    display: none;
+    width: 126vw;
+    background-color: rgba(65, 63, 63, 0.281);
+    background-size: 100%;
+    margin-left: -21%;
+
+}
+.right{
+  display: none;
+}
+  .toggle-button {
+    display: flex;
+}
+.navbar ul {
+    width: 100%;
+    flex-direction: column;  
+}
+.navbar ul li {
+    text-align: center;
+}
+
+.navbar ul li a {
+    padding: .5rem 1rem;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head{
+  font-size: 60%;
+}
+.hd1{
+  margin-top: 20px;
+}
+
 }
