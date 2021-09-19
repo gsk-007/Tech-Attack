@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../static/css/poll.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="overlay1 hidden">
+      <div class="addpolldiv">
+        <span class="close close-btn1">x</span>
+        <form action="/poll" method="POST">
+          <table>
+            <tr>
+              <td>USERID :</td>
+              <td>
+                <input type="text" name="author" id="" required />
+              </td>
+            </tr>
+            <tr>
+              <td>PASSWORD :</td>
+              <td>
+                <input type="text" name="password" id="" required />
+              </td>
+            </tr>
+            <tr>
+              <td>QUESTION :</td>
+              <td>
+                <input type="text" name="question" id="" required />
+              </td>
+            </tr>
+            <tr>
+              <td>OPTIONS :</td>
+              <td class="optionaddtd">
+                <input class="op" type="text" name="option" id="" required />
+              </td>
+            </tr>
+          </table>
+          <button style="display: flex">CREATE POLL</button>
+        </form>
+        <button class="add-options">+ADD OPTIONS+</button>
+      </div>
+    </div>
+    <div class="overlay2 hidden">
+      <div class="trackvote">
+        <span class="close close-btn2">x</span>
+        <form action="">
+          <input type="radio" name="" id="" />
+        </form>
+      </div>
+    </div>
+    <div style="text-align: center; padding-top: 10px">
+      <button class="add btn-style">ADD POLL</button>
+    </div>
+    <div class="poll-container">
+      <div class="poll">
+        <div class="question">QUESTION WILL BE HERE ?</div>
+        <form action="">
+          <div class="answers">
+            <div class="options">OPTION 1<span>%NO.VOTE%</span></div>
+            <div class="options">OPTION 2<span>%NO.VOTE%</span></div>
+            <div class="options">OPTION 3<span>%NO.VOTE%</span></div>
+          </div>
+        </form>
+        <button class="give-vote btn-style">TRACK VOTE</button>
+      </div>
+    </div>
+    <script src="./../static/js/poll.js"></script>
+  </body>
+</html>
+
+<!-- <div class="poll-container">
+  <div class="poll">
+    <div class="question">QUESTION WILL BE HERE</div>
+      <form action="">
+        <div class="answers">
+          <input value="" type="radio">OPTION1</input>
+          <input value="" type="radio">OPTION1</input>
+          <input value="" type="radio">OPTION1</input>
+        </div>
+      </form>
+  </div> 
+</div> -->

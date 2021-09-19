@@ -7,6 +7,7 @@ const app = express();
 const studentRouter = require("./routes/studentRoute");
 // ---
 const pageController = require("./controllers/pageController");
+const pollController = require("./controllers/pollController");
 dotenv.config({ path: "./config.env" });
 
 // MONGO ATLAS CONNECT
@@ -65,8 +66,12 @@ app.get("/login.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/login.html"));
 });
 
+app.get("/poll.html", pollController.showPolls);
+
 app.post("/userPage", pageController.logIn);
 app.post("/editData", pageController.editData);
+app.post("/poll", pollController.createPoll);
+app.post("/editpoll", pollController.editpoll);
 
 // STUDENT API ROUTES
 app.use("/api/v1/students", studentRouter);

@@ -1,0 +1,194 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  background: #44a08d;
+  background: -webkit-linear-gradient(to right, #093637, #44a08d);
+  background: linear-gradient(to right, #093637, #44a08d);
+}
+.poll-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.438);
+  width: 80%;
+  margin: auto;
+  align-items: center;
+  padding-bottom: 20px;
+  overflow: auto;
+  border-radius: 20px;
+}
+
+.poll {
+  width: 50%;
+  height: auto;
+  background-color: azure;
+  margin: 10px;
+  border-radius: 20px;
+}
+button {
+  margin: auto;
+}
+.question {
+  padding: 15px;
+  color: #111;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.answers {
+  padding: 20px 20px 10px;
+}
+
+/* input {
+  display: flex;
+} */
+.options {
+  background-color: rgba(0, 0, 0, 0.096);
+  display: flex;
+  margin: 5px;
+  border-radius: 10px;
+  border: solid rgb(32, 159, 175);
+  padding: 5px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.options:hover {
+  border: solid rgb(0, 224, 253);
+  cursor: pointer;
+}
+.btn-style {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+  background: #06e022;
+  background-image: -webkit-linear-gradient(top, #131413, #0e521d);
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: Times New Roman;
+  font-weight: 100;
+  padding: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+.btn-style:hover {
+  background: #0e521d;
+  background-image: -webkit-linear-gradient(top, #0e521d, #10b726);
+  background-image: -moz-linear-gradient(top, #0e521d, #10b726);
+  background-image: -ms-linear-gradient(top, #0e521d, #10b726);
+  background-image: -o-linear-gradient(top, #0e521d, #10b726);
+  background-image: -webkit-gradient(to bottom, #0e3d18, #10b726);
+  border-radius: 19px;
+  text-decoration: underline;
+}
+
+.add {
+  width: 200px;
+  font-size: larger;
+}
+/*============ SCROLL BAR ===================*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*============ SCROLL BAR ===================*/
+/*============ MODAL ===================*/
+.add-options {
+  display: flex;
+}
+.optionaddtd {
+  display: flex;
+  flex-direction: column;
+}
+.op {
+  width: 100%;
+}
+table {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+td {
+  text-align: center;
+}
+.overlay1,
+.overlay2 {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.219);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+.addpolldiv {
+  height: 75%;
+  width: 50%;
+  background-color: wheat;
+  border-radius: 20px;
+  padding: 20px;
+  overflow: auto;
+}
+.trackvote {
+  height: 75%;
+  width: 50%;
+  background-color: wheat;
+  border-radius: 20px;
+  padding: 20px;
+}
+.close {
+  display: flex;
+  justify-content: flex-end;
+  font-size: larger;
+  margin-left: 7px;
+}
+.close:hover {
+  cursor: pointer;
+}
+.overans {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+.overques {
+  display: flex;
+  justify-content: center;
+}
+.cv {
+  display: flex;
+}
+/*============ MODAL ===================*/
+/*////////////MEDIA QUERY//////////*/
+@media only screen and (max-width: 480px) {
+  .poll-container {
+    width: 100%;
+    border-radius: 0;
+  }
+  .poll {
+    width: 80%;
+  }
+  .options {
+    width: 100%;
+  }
+  .answers {
+    padding: 5px;
+  }
+}
