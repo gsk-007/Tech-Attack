@@ -23,9 +23,7 @@ exports.createPoll = async (req, res) => {
         pbody.weight[i] = 0;
       }
       if (stdData[0].password === pbody.password) {
-        console.log(pbody);
-        // const newPoll = await Poll.create(pbody);
-        // res.status(204).send();
+        const newPoll = await Poll.create(pbody);
         const pollData = await Poll.find();
         res.render("./ejsFiles/poll.ejs", { pollData });
       } else {
@@ -58,20 +56,19 @@ exports.showPolls = async (req, res) => {
 exports.editpoll = async (req, res) => {
   try {
     const stdData = await Student.find({ roll_no: req.body.author });
-    const pollData = await Poll.find({ pollid: Number(req.body.pollid) });
+    const pdata = await Poll.find({ pollid: Number(req.body.pollid) });
     let errObj = {
       message: "NO USER WITH THIS ID",
       who: "USER ERROR",
     };
     if (stdData.length !== 0) {
       if (stdData[0].password === req.body.password) {
-        if (
-          pollData[0].voted[Number(req.body.author.slice(-2)) - 1] === false
-        ) {
-          pollData[0].weight[Number(req.body.selected)]++;
-          pollData[0].voted[Number(req.body.author.slice(-2)) - 1] = true;
-          await Poll.findByIdAndUpdate(pollData[0]._id, pollData[0]);
-          res.status(204).send();
+        if (pdata[0].voted[Number(req.body.author.slice(-2)) - 1] === false) {
+          pdata[0].weight[Number(req.body.selected)]++;
+          pdata[0].voted[Number(req.body.author.slice(-2)) - 1] = true;
+          await Poll.findByIdAndUpdate(pdata[0]._id, pdata[0]);
+          const pollData = await Poll.find();
+          res.render("./ejsFiles/poll.ejs", { pollData });
         } else {
           errObj.message = "ALREADY VOTED";
           res.render("./ejsFiles/errorPage.ejs", { errObj });

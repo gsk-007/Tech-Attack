@@ -41,7 +41,7 @@ close2.forEach((curr, i) => {
 addoption.addEventListener("click", () => {
   optionaddtd.insertAdjacentHTML(
     "beforeend",
-    `<input type="text" name="option" id="" />`
+    `<input type="text" name="option" id="" required/>`
   );
 });
 

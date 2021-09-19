@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -5,11 +6,13 @@
 }
 body {
   font-family: "Raleway", sans-serif;
+  font-weight: 100px;
   background: #44a08d;
   background: -webkit-linear-gradient(to right, #093637, #44a08d);
   background: linear-gradient(to right, #093637, #44a08d);
 }
 .poll-container {
+  font-family: "Roboto Mono", monospace;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -127,6 +130,7 @@ td {
 }
 .overlay1,
 .overlay2 {
+  font-family: "Roboto Mono", monospace;
   display: flex;
   background-color: rgba(0, 0, 0, 0.219);
   width: 100%;
@@ -140,9 +144,9 @@ td {
   display: none;
 }
 .addpolldiv {
-  height: 75%;
+  height: 65%;
   width: 50%;
-  background-color: wheat;
+  background-color: tan;
   border-radius: 20px;
   padding: 20px;
   overflow: auto;
@@ -150,9 +154,10 @@ td {
 .trackvote {
   height: 75%;
   width: 50%;
-  background-color: wheat;
+  background-color: tan;
   border-radius: 20px;
-  padding: 20px;
+  padding: 10px;
+  overflow: auto;
 }
 .close {
   display: flex;
@@ -175,6 +180,31 @@ td {
 .cv {
   display: flex;
 }
+input {
+  background-color: rgba(0, 0, 0, 0.288);
+  margin: 5px;
+  height: 30px;
+}
+input:after {
+  background-color: rgb(82, 80, 80);
+}
+
+.btn-sty {
+  background-image: -webkit-linear-gradient(top, #90de1b, #8c9651);
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 1px 6px #666666;
+  -moz-box-shadow: 0px 1px 6px #666666;
+  box-shadow: 0px 1px 6px #666666;
+  color: #ffffff;
+  padding: 9px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.btn-sty:hover {
+  background: #8c9651;
+  background-image: -webkit-linear-gradient(top, #8c9651, #90de1b);
+  text-decoration: underline;
+}
 /*============ MODAL ===================*/
 /*////////////MEDIA QUERY//////////*/
 @media only screen and (max-width: 850px) {
@@ -193,5 +223,10 @@ td {
   }
   .answers {
     padding: 5px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .addpolldiv {
+    width: 100%;
   }
 }
