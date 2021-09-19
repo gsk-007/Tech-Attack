@@ -39,3 +39,11 @@ main{
     cursor: pointer;
     text-decoration: underline;
 }
+
+
+
+@media (max-width: 825px){
+    .notice-board{
+        margin-top: 24vh;
+    }
+}

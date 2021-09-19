@@ -172,3 +172,11 @@ h1 {
   text-decoration: underline;
   transform: scale(1.1);
 }
+
+
+
+@media (max-width: 825px){
+  .to-do-list{
+    margin-top: 25vh;
+  }
+}
