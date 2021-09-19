@@ -65,3 +65,16 @@ main {
   color: black;
   opacity: 1;
 }
+@media (max-width: 850px) {
+  main {
+    max-width: 90vw;
+  }
+}
+@media (max-width: 470px) {
+  .form-group input {
+    width: 90vw;
+  }
+  .inpGen {
+    width: 90vw;
+  }
+}

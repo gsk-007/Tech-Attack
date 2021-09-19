@@ -39,14 +39,14 @@ footer {
 }
 
 .head {
-  height: 90vh;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-content: stretch;
   align-items: center;
   color: white;
-  font-size: 30px;
+  padding: 30px;
+  font-size: 20px;
 }
 .hd1 {
   transform: translateY(-45px);
@@ -73,3 +73,6 @@ footer {
   text-shadow: 4px 3px 13px rgba(60, 70, 116, 0.5);
 }
 
+.marg {
+  margin-bottom: 33vh;
+}

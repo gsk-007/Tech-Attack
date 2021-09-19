@@ -125,3 +125,18 @@ html {
   margin: auto;
   padding: 10px;
 }
+@media (max-width: 850px) {
+  #table-wrapper {
+    margin-top: 3vh;
+    position: relative;
+  }
+  #table-scroll {
+    height: 50vh;
+  }
+  table {
+    width: 100%;
+  }
+  .modal-content {
+    width: 90%;
+  }
+}

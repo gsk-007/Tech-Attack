@@ -10,7 +10,7 @@ body {
 .bg {
   /* filter: blur(20px); */
   margin: auto;
-  height: 100%;
+  height: 95vh;
   width: 100%;
 }
 .form-container {
@@ -229,4 +229,16 @@ input:focus {
 }
 .userName {
   margin-top: 0;
+}
+
+@media (max-width: 850px) {
+  .form-container {
+    width: 95%;
+  }
+  .form-container input {
+    width: 95%;
+  }
+  form {
+    width: 90%;
+  }
 }

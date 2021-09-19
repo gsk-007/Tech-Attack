@@ -177,7 +177,10 @@ td {
 }
 /*============ MODAL ===================*/
 /*////////////MEDIA QUERY//////////*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 850px) {
+  /* .header {
+    margin-bottom: 33vh;
+  } */
   .poll-container {
     width: 100%;
     border-radius: 0;
