@@ -30,19 +30,4 @@ const studentSchema = new mongoose.Schema({
 
 const Student = new mongoose.model("Student", studentSchema);
 
-// const tempStudent = new Student({
-//   name: "Roman",
-//   password: 1234,
-//   roll_no: "B455657",
-// });
-
-// tempStudent
-//   .save()
-//   .then((doc) => {
-//     console.log(doc);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-
 module.exports = Student;

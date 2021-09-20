@@ -3,9 +3,9 @@ const path = require("path");
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const app = express();
+
 //--------router--------//
 const studentRouter = require("./routes/studentRoute");
-// ---
 const pageController = require("./controllers/pageController");
 const pollController = require("./controllers/pollController");
 dotenv.config({ path: "./config.env" });
@@ -60,14 +60,13 @@ app.get("/signup.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/signup.html"));
 });
 
-app.post("/signup.html", pageController.signUp);
-
 app.get("/login.html", (req, res) => {
   res.sendFile(path.join(__dirname, "/views/login.html"));
 });
 
 app.get("/poll.html", pollController.showPolls);
 
+app.post("/signup.html", pageController.signUp);
 app.post("/userPage", pageController.logIn);
 app.post("/editData", pageController.editData);
 app.post("/poll", pollController.createPoll);

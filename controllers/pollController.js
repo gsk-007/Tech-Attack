@@ -2,10 +2,15 @@ const path = require("path");
 const Poll = require("./../models/pollModel");
 const Student = require("./../models/studentModel");
 
+// ---
 let initarr = [];
 for (let i = 0; i < 67; i++) {
   initarr[i] = false;
 }
+// ---
+
+//============== HANDLER FUNCTION TO CREATE NEW POLLS ============== //
+
 exports.createPoll = async (req, res) => {
   try {
     let errObj = {
@@ -41,6 +46,8 @@ exports.createPoll = async (req, res) => {
   }
 };
 
+//============== HANDLER FUNCTION TO DISPLAY ALL POLLS ============== //
+
 exports.showPolls = async (req, res) => {
   try {
     const pollData = await Poll.find();
@@ -52,6 +59,8 @@ exports.showPolls = async (req, res) => {
     res.render("./ejsFiles/errorPage.ejs", { errObj });
   }
 };
+
+//============== HANDLER FUNCTION TO UPDATE VOTE COUNT FOR EACH POLL ============== //
 
 exports.editpoll = async (req, res) => {
   try {
