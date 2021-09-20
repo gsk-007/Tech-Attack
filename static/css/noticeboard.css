@@ -1,29 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap");
 .bg {
-  background-image: url("../imgs/noticeboard-bg.jpg");
+  background-image: url("../imgs/noticeboard_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-main {
+  position: absolute;
+  width: 100%;
   height: 100%;
+}
+span {
+  cursor: pointer;
+}
+.overlay1,
+.overlay2 {
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.219);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.delete-div {
+  display: inline;
+}
+.hide {
+  display: none;
+}
+.divBtn {
+  text-align: center;
+}
+.bt {
+  text-align: center;
+  margin-top: 10px;
+  background-color: transparent;
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: Times New Roman;
+  font-weight: 100;
+  padding: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+.bt:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 5px rgba(255, 255, 255, 0.383);
+}
+.del-btn {
+  padding: 4px;
+  margin: 0;
+}
+.del-btn:hover {
+  box-shadow: 0px 0px;
+}
+main {
   /* background-color: red; */
   margin-top: 10px;
   padding: 20px;
   color: aliceblue;
 }
 .notice-board {
-  height: 90vh;
+  /* height: 90vh; */
+  max-height: 69vh;
   max-width: 60vw;
   display: flex;
   margin: auto;
   border: 2px solid black;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow: auto;
   backdrop-filter: blur(15px);
 }
 .notice-board h1 {
-  margin: auto;
+  display: flex;
   padding: 5px;
+  justify-content: center;
 }
 .notice-board ul {
   list-style: decimal;
@@ -32,14 +85,60 @@ main {
   margin: 10px 10px;
   padding: 5px 10px;
 }
+.notices h3 {
+  display: flex;
+  justify-content: space-between;
+}
 .notices h3:hover {
   cursor: pointer;
   text-decoration: underline;
 }
+/*============ SCROLL BAR ===================*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f100;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*============ SCROLL BAR ===================*/
 
+form {
+  display: flex;
+  background-color: rgba(128, 128, 128, 0.404);
+  color: aqua;
+  height: 50%;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+input {
+  background-color: rgba(137, 43, 226, 0.363);
+  margin: 5px;
+}
 @media (max-width: 850px) {
   .notice-board {
     width: 90%;
     max-width: 90vw;
+    max-height: 40vh;
+  }
+  .notices h3 {
+    display: inline;
+  }
+}
+@media (max-width: 544px) {
+  form {
+    width: 100%;
+    border-radius: 0;
+  }
+  input {
+    width: 90%;
   }
 }

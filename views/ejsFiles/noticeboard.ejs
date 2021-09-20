@@ -51,12 +51,11 @@
       </header>
       <div class="overlay1 hide">
         <span style="color: wheat" class="close1">CLOSE</span>
-        <form action="" method="">
+        <form action="/deletenotice" method="POST">
+          <h3 class="hq">SELECT : <a class="hq-del">DELETE</a> or <a class="hq-edit">EDIT</a></h2>
           <table>
             <tr>
-              <td>
-                ONLY CR's CAN REMOVE THE NOTICE<br />THIS WILL DELETE NOTICE
-              </td>
+              <td>ONLY CR's CAN EDIT THE NOTICE</td>
             </tr>
             <tr>
               <td>USERID :</td>
@@ -69,10 +68,25 @@
               <td>
                 <input type="text" name="password" id="" required />
               </td>
+              <td>
+                <input type="text" name="nid" value="" class="nid-div hide" />
+              </td>
+            </tr>
+            <tr class="edit hide">
+              <td>HEADING :</td>
+              <td>
+                <input class="edt" type="text" name="heading" id=""  />
+              </td>
+            </tr>
+            <tr class="edit hide">
+              <td>CONTENT :</td>
+              <td>
+                <input class="edt" type="text" name="content" id=""  />
+              </td>
             </tr>
           </table>
-          <button class="bt" style="color: aqua; display: flex">
-            DELETE NOTICE
+          <button class="conf bt" style="color: aqua; display: flex" disabled>
+            CONFIRM
           </button>
         </form>
       </div>
@@ -117,87 +131,31 @@
         <div class="notice-board">
           <h1>NOTICE BOARD</h1>
           <ul>
+            <% ntdata.forEach((curr,i)=>{ %>
             <div class="notices">
               <li>
                 <h3>
-                  Lorem ipsum dolor sit amet.
+                  <%= curr.heading %>
                   <button class="bt del-btn">EDIT</button>
                 </h3>
               </li>
               <p>
-                <input class="notice_id hide" value="_id" type="text" />
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                nostrum itaque porro quia excepturi consectetur accusamus quos
-                tempora, maiores rerum illo vero neque ratione quidem,
-                recusandae obcaecati exercitationem aliquam earum ea amet.
+                <input
+                  class="notice_id hide"
+                  value="<%= curr._id %>"
+                  type="text"
+                />
+                <%= curr.content %>
               </p>
               <br />
               <hr />
             </div>
-            <div class="notices">
-              <li>
-                <h3>
-                  Lorem ipsum dolor sit amet.<button class="bt del-btn">
-                    EDIT
-                  </button>
-                </h3>
-              </li>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                nostrum itaque porro quia excepturi consectetur accusamus quos
-                tempora, maiores rerum illo vero neque ratione quidem,
-                recusandae obcaecati exercitationem aliquam earum ea amet.
-              </p>
-              <br />
-              <hr />
-            </div>
-            <div class="notices">
-              <li><h3>Lorem ipsum dolor sit amet.</h3></li>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                nostrum itaque porro quia excepturi consectetur accusamus quos
-                tempora, maiores rerum illo vero neque ratione quidem,
-                recusandae obcaecati exercitationem aliquam earum ea amet.
-              </p>
-              <br />
-              <hr />
-            </div>
-            <div class="notices">
-              <li><h3>Lorem ipsum dolor sit amet.</h3></li>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                nostrum itaque porro quia excepturi consectetur accusamus quos
-                tempora, maiores rerum illo vero neque ratione quidem,
-                recusandae obcaecati exercitationem aliquam earum ea amet.
-              </p>
-              <br />
-              <hr />
-            </div>
-            <div class="notices">
-              <li><h3>Lorem ipsum dolor sit amet.</h3></li>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                nostrum itaque porro quia excepturi consectetur accusamus quos
-                tempora, maiores rerum illo vero neque ratione quidem,
-                recusandae obcaecati exercitationem aliquam earum ea amet.
-              </p>
-              <br />
-              <hr />
-            </div>
-            <div class="notices">
-              <li><h3>Lorem ipsum dolor sit amet.</h3></li>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-                nostrum itaque porro quia excepturi consectetur accusamus quos
-                tempora, maiores rerum illo vero neque ratione quidem,
-                recusandae obcaecati exercitationem aliquam earum ea amet.
-              </p>
-              <br />
-              <hr />
-            </div>
+            <% }); %>
           </ul>
         </div>
-        <div class="divBtn invi"><button class="bt">ADD NOTICE</button></div>
+        <div class="divBtn invi">
+          <button class="bt ooo">ADD NOTICE</button>
+        </div>
       </main>
     </div>
     <script src="../static/js/home.js"></script>
