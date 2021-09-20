@@ -24,6 +24,9 @@ exports.createStudent = async (req, res) => {
 exports.getAllStudents = async (req, res) => {
   try {
     const studentsData = await Student.find();
+    studentsData.forEach((curr) => {
+      curr.password = "*";
+    });
     res.status(200).json({
       status: "success",
       size: studentsData.length,
@@ -44,6 +47,7 @@ exports.getAllStudents = async (req, res) => {
 exports.getStudent = async (req, res) => {
   try {
     const sigleStudent = await Student.findById(req.params.id);
+    sigleStudent.password = "*";
     res.status(200).json({
       status: "success",
       data: {
