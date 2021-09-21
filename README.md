@@ -3,7 +3,7 @@
 <hr>
 
 ## Project Description <br>
-This is a website for the IT branch of IIIT BBSR which includes all the relevant information for the students and is accessible to the students of this branch.
+This is a website for the IT branch of IIIT BBSR which includes all the relevant information for the students and is only accessible to the students of this branch.
 
 <hr>
 
