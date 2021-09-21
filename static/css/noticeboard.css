@@ -64,7 +64,7 @@ main {
 }
 .notice-board {
   /* height: 90vh; */
-  max-height: 69vh;
+  max-height: 75vh;
   max-width: 60vw;
   display: flex;
   margin: auto;
