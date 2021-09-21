@@ -2,6 +2,11 @@
 ### LINK TO WEBSITE : [Click Here !](https://tapri.herokuapp.com/)
 <hr>
 
+## Project Description <br>
+This is a website for the IT branch of IIIT BBSR which includes all the relevant information for the students and is only accessible to the students of this branch.
+
+<hr>
+
 # 🛠Tech Stack<br>
  ### Frontend :
  ![HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)&nbsp;
