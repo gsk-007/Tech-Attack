@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome<UsrName></title>
+    <title>Welcome <%=docs[0].name%></title>
     <link rel="stylesheet" href="../static/css/userdashboard.css" />
     <link rel="stylesheet" href="../static/css/utils.css" />
   </head>
@@ -71,8 +71,9 @@
       </div>
     </div>
       <div class="second-display hidden">
+        <span style="cursor: pointer; color: tan;"class="close">CLOSE</span>
         <div class="form-group">
-          <h1 style="margin-bottom: 20px;">ENTER THE DETAILS <span style="cursor: pointer; color: #000;"class="close">&times;</span> YOU WANT TO EDIT</h1>
+          <h1 style="margin-bottom: 20px;">ENTER THE DETAILS YOU WANT TO EDIT</h1>
         <form class = "form" action="/editData" method="POST">
           
           <table>

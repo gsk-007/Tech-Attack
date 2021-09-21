@@ -26,10 +26,6 @@ main {
   flex-wrap: nowrap;
   justify-content: center;
 }
-.top img {
-  height: 200px;
-  width: 210px;
-}
 .top .info-container {
   margin-left: 17vw;
   width: 50%;
@@ -156,13 +152,16 @@ main .input-field {
   margin-bottom: 20vh;
   margin-top: 10vh;
 }
-
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .form-group {
   height: 60vh;
   color: tan;
   background-color: rgba(122, 120, 120, 0.294);
   margin: auto;
-  width: 70vh;
   overflow: auto;
 }
 
@@ -170,4 +169,42 @@ input {
   background-color: rgba(0, 128, 128, 0.479);
   margin-top: 5px;
   margin-bottom: 5px;
+}
+@media only screen and (max-width: 312px) {
+  input {
+    width: 100%;
+  }
+  .sty {
+    padding: 2px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .top img {
+    height: 50%;
+    margin-top: 34px;
+  }
+  .first-display {
+    background-color: rgba(122, 120, 120, 0.294);
+  }
+  .top .info-container {
+    background-color: rgba(122, 120, 120, 0.294);
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+  }
+  .info-container {
+    margin: 5px;
+    border-radius: 10px;
+  }
+  .right-container .info-container {
+    width: 100%;
+    text-align: left;
+  }
+  .top .user-info {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
