@@ -189,3 +189,15 @@ footer {
     width: 60%;
   }
 }
+@media (max-width: 215px){
+  .head{
+    font-size: 35%;
+  }
+  .left img {
+    border-radius: 10px;
+    margin: 10px;
+    height: 66%;
+    width: 50%;
+  }
+  
+}
