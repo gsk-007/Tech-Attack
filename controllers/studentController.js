@@ -1,6 +1,6 @@
 const Student = require("./../models/studentModel");
 
-// HANDLER FUNCTION TO CREATE STUDENT
+//==============  HANDLER FUNCTION TO CREATE STUDENT ============== //
 
 exports.createStudent = async (req, res) => {
   try {
@@ -19,11 +19,14 @@ exports.createStudent = async (req, res) => {
   }
 };
 
-// HANDLER FUNCTION TO GET ALL STUDENTS DATA
+//============== HANDLER FUNCTION TO GET ALL STUDENTS DATA ============== //
 
 exports.getAllStudents = async (req, res) => {
   try {
     const studentsData = await Student.find();
+    studentsData.forEach((curr) => {
+      curr.password = "*";
+    });
     res.status(200).json({
       status: "success",
       size: studentsData.length,
@@ -39,11 +42,12 @@ exports.getAllStudents = async (req, res) => {
   }
 };
 
-// HANDLER FUNCTION TO GET A UNIQUE STUDENT DATA
+//============== HANDLER FUNCTION TO GET A UNIQUE STUDENT DATA ============== //
 
 exports.getStudent = async (req, res) => {
   try {
     const sigleStudent = await Student.findById(req.params.id);
+    sigleStudent.password = "*";
     res.status(200).json({
       status: "success",
       data: {
@@ -58,7 +62,7 @@ exports.getStudent = async (req, res) => {
   }
 };
 
-// HANDLER FUNCTION TO UPDATE STUDENT DATA
+//============== HANDLER FUNCTION TO UPDATE STUDENT DATA ============== //
 
 exports.updateStudent = async (req, res) => {
   try {
@@ -81,7 +85,7 @@ exports.updateStudent = async (req, res) => {
   }
 };
 
-// HANDLER FUNCTION TO DELETE STUDENT DATA
+//============== HANDLER FUNCTION TO DELETE STUDENT DATA ============== //
 
 exports.deleteStudent = async (req, res) => {
   try {
