@@ -74,5 +74,20 @@ footer {
 }
 
 .marg {
-  margin-bottom: 33vh;
+  margin-bottom: 35vh;
+}
+
+@media (max-width: 410px) {
+  .head {
+    font-size: 30%;
+  }
+  .hd1 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 280px){
+  .head{
+    font-size: 40%;
+  }
 }

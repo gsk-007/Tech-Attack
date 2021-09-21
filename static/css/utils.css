@@ -152,45 +152,40 @@ footer {
   }
 }
 
+@media (max-width: 280px){
+  .btn {
+    margin: 5px;
+    background-color: transparent;
+    border-radius: 12px;
+    border: 2px solid #e2e3ec;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Trebuchet MS;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 3px 3px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+}
+
 @media (max-width: 410px) {
-  .navbar {
-    margin-top: 12vh;
-    height: fit-content;
-    display: none;
-    width: 126vw;
-    background-color: rgba(65, 63, 63, 0.281);
-    background-size: 100%;
-    margin-left: -21%;
-  }
-  .right {
-    display: none;
-  }
-  .toggle-button {
-    display: flex;
-  }
-  .navbar ul {
-    width: 100%;
-    flex-direction: column;
-  }
-  .navbar ul li {
-    text-align: center;
-  }
-
-  .navbar ul li a {
-    padding: 0.5rem 1rem;
-  }
-
-  .active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
   .head {
     font-size: 50%;
   }
   .hd1 {
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 280px){
+  .head{
+    font-size: 40%;
+  }
+  .left img {
+    border-radius: 10px;
+    margin: 10px;
+    height: 66%;
+    width: 60%;
   }
 }
