@@ -4,7 +4,7 @@ const inputBtn = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 const deleteBtn = document.getElementById("delete-btn");
 const tasksFromLocalStorage = JSON.parse(localStorage.getItem("myTasks"));
-// const tabBtn = document.getElementById("tab-btn")
+
 
 if (tasksFromLocalStorage) {
   myTasks = tasksFromLocalStorage;
