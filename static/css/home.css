@@ -1,6 +1,6 @@
 .bg {
   position: absolute;
-  height: 110vh;
+  height: 100%;
   width: 100%;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
     url("./../imgs/i2.jpg");
@@ -37,26 +37,39 @@ footer {
   color: white;
   font-family: "Roboto Mono", monospace;
 }
-
-.head {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-content: stretch;
-  align-items: center;
+h1 {
+  /* color: rgb(255, 255, 255);*/
+  color: rgba(149, 150, 144, 0.726);
+  transition: 0.3s;
+  font-size: 6vw;
+}
+h1:hover {
+  color: rgb(255, 255, 255);
+}
+p {
   color: white;
-  padding: 30px;
-  font-size: 20px;
+  font-size: 3vw;
 }
-.hd1 {
-  transform: translateY(-45px);
+.ico-img {
+  text-align: center;
 }
-.hd2 {
+
+.cont {
+  margin-top: 13vh;
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
 }
-
+h3 {
+  margin-top: 3vh;
+  color: rgba(149, 150, 144, 0.815);
+  font-size: 3vw;
+  transition: 0.2s;
+}
+h3:hover {
+  color: rgb(255, 255, 255);
+}
 .img1 {
   display: block;
   margin: 0;
@@ -78,16 +91,16 @@ footer {
 }
 
 @media (max-width: 410px) {
-  .head {
-    font-size: 30%;
+  h1 {
+    color: white;
+    font-size: 11vw;
   }
-  .hd1 {
-    margin-top: 30px;
+  p {
+    color: white;
+    font-size: 9vw;
   }
-}
-
-@media (max-width: 280px){
-  .head{
-    font-size: 40%;
+  h3 {
+    color: white;
+    font-size: 10vw;
   }
 }
