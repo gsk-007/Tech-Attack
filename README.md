@@ -2,6 +2,12 @@
 ### LINK TO WEBSITE : [Click Here !](https://tapri.herokuapp.com/)
 <hr>
 
+## Sample data
+1. <strong>Roll_id</strong> - B420066<br>
+<strong>password</strong> - 1234<br>
+2. <strong>Roll_id</strong> - B420024<br>
+<strong>password</strong> - 4321<br>
+
 ## Project Description <br>
 This is a website for the IT branch of IIIT BBSR which includes all the relevant information for the students and is only accessible to the students of this branch.
 
