@@ -1,5 +1,5 @@
 # ⚔Tech-Attack⚔
-### LINK TO WEBSITE : <a href="https://tapri.herokuapp.com/" target="_blank">Click Here !</a>
+### LINK TO WEBSITE : <a href="https://tapri.herokuapp.com/">Click Here !</a>
 <hr>
 
 ## Sample data
