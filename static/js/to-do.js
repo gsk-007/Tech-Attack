@@ -26,7 +26,7 @@ function render(tasks) {
   ulEl.innerHTML = listItems;
 }
 
-deleteBtn.addEventListener("click", function () {
+deleteBtn.addEventListener("dblclick", function () {
   localStorage.clear();
   myTasks = [];
   render(myTasks);
